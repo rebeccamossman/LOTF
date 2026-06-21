@@ -1,1 +1,107 @@
-const k="modulepreload",A=function(c){return"/"+c},v={},B=function(u,l,h){let m=Promise.resolve();if(l&&l.length>0){let s=function(r){return Promise.all(r.map(o=>Promise.resolve(o).then(e=>({status:"fulfilled",value:e}),e=>({status:"rejected",reason:e}))))};document.getElementsByTagName("link");const n=document.querySelector("meta[property=csp-nonce]"),a=n?.nonce||n?.getAttribute("nonce");m=s(l.map(r=>{if(r=A(r),r in v)return;v[r]=!0;const o=r.endsWith(".css"),e=o?'[rel="stylesheet"]':"";if(document.querySelector(`link[href="${r}"]${e}`))return;const t=document.createElement("link");if(t.rel=o?"stylesheet":k,o||(t.as="script"),t.crossOrigin="",t.href=r,a&&t.setAttribute("nonce",a),document.head.appendChild(t),o)return new Promise((E,d)=>{t.addEventListener("load",E),t.addEventListener("error",()=>d(new Error(`Unable to preload CSS for ${r}`)))})}))}function f(s){const n=new Event("vite:preloadError",{cancelable:!0});if(n.payload=s,window.dispatchEvent(n),!n.defaultPrevented)throw s}return m.then(s=>{for(const n of s||[])n.status==="rejected"&&f(n.reason);return u().catch(f)})};function w(){const c=document.getElementById("section-container"),u=document.getElementById("slides-container"),l=document.getElementById("presentation-toggle"),h=document.getElementById("presentation-controls"),m=document.getElementById("prev-slide"),f=document.getElementById("next-slide"),s=document.getElementById("exit-presentation"),n=document.getElementById("slide-counter");if(!c||!u)return;const a=c,o=Array.from(u.querySelectorAll("[data-slide], .challenge-card"));let e=0,t=!1;function E(){n&&(n.textContent=`${e+1} / ${o.length}`)}function d(i){e=Math.max(0,Math.min(i,o.length-1)),o[e].scrollIntoView({behavior:"instant",block:"start"}),E()}function p(){t=!0,a.classList.add("presenting"),h?.removeAttribute("hidden"),l?.setAttribute("hidden",""),a.requestFullscreen?.().catch(()=>{}),d(0)}function g(){t=!1,a.classList.remove("presenting"),h?.setAttribute("hidden",""),l?.removeAttribute("hidden"),document.fullscreenElement&&document.exitFullscreen()}l?.addEventListener("click",p),s?.addEventListener("click",g),m?.addEventListener("click",()=>d(e-1)),f?.addEventListener("click",()=>d(e+1)),document.addEventListener("keydown",i=>{t&&((i.key==="ArrowRight"||i.key==="ArrowDown")&&(i.preventDefault(),d(e+1)),(i.key==="ArrowLeft"||i.key==="ArrowUp")&&(i.preventDefault(),d(e-1)))}),document.addEventListener("fullscreenchange",()=>{!document.fullscreenElement&&t&&g()})}w();const y=document.getElementById("ai-assistant");y&&B(()=>import("./aiAssistant.BqJ8pAhN.js"),[]).then(c=>c.mountAssistant(y));
+const k = 'modulepreload',
+  A = function (c) {
+    return '/' + c;
+  },
+  v = {},
+  B = function (u, l, h) {
+    let m = Promise.resolve();
+    if (l && l.length > 0) {
+      let s = function (r) {
+        return Promise.all(
+          r.map((o) =>
+            Promise.resolve(o).then(
+              (e) => ({ status: 'fulfilled', value: e }),
+              (e) => ({ status: 'rejected', reason: e }),
+            ),
+          ),
+        );
+      };
+      document.getElementsByTagName('link');
+      const n = document.querySelector('meta[property=csp-nonce]'),
+        a = n?.nonce || n?.getAttribute('nonce');
+      m = s(
+        l.map((r) => {
+          if (((r = A(r)), r in v)) return;
+          v[r] = !0;
+          const o = r.endsWith('.css'),
+            e = o ? '[rel="stylesheet"]' : '';
+          if (document.querySelector(`link[href="${r}"]${e}`)) return;
+          const t = document.createElement('link');
+          if (
+            ((t.rel = o ? 'stylesheet' : k),
+            o || (t.as = 'script'),
+            (t.crossOrigin = ''),
+            (t.href = r),
+            a && t.setAttribute('nonce', a),
+            document.head.appendChild(t),
+            o)
+          )
+            return new Promise((E, d) => {
+              (t.addEventListener('load', E),
+                t.addEventListener('error', () => d(new Error(`Unable to preload CSS for ${r}`))));
+            });
+        }),
+      );
+    }
+    function f(s) {
+      const n = new Event('vite:preloadError', { cancelable: !0 });
+      if (((n.payload = s), window.dispatchEvent(n), !n.defaultPrevented)) throw s;
+    }
+    return m.then((s) => {
+      for (const n of s || []) n.status === 'rejected' && f(n.reason);
+      return u().catch(f);
+    });
+  };
+function w() {
+  const c = document.getElementById('section-container'),
+    u = document.getElementById('slides-container'),
+    l = document.getElementById('presentation-toggle'),
+    h = document.getElementById('presentation-controls'),
+    m = document.getElementById('prev-slide'),
+    f = document.getElementById('next-slide'),
+    s = document.getElementById('exit-presentation'),
+    n = document.getElementById('slide-counter');
+  if (!c || !u) return;
+  const a = c,
+    o = Array.from(u.querySelectorAll('[data-slide], .challenge-card'));
+  let e = 0,
+    t = !1;
+  function E() {
+    n && (n.textContent = `${e + 1} / ${o.length}`);
+  }
+  function d(i) {
+    ((e = Math.max(0, Math.min(i, o.length - 1))),
+      o[e].scrollIntoView({ behavior: 'instant', block: 'start' }),
+      E());
+  }
+  function p() {
+    ((t = !0),
+      a.classList.add('presenting'),
+      h?.removeAttribute('hidden'),
+      l?.setAttribute('hidden', ''),
+      a.requestFullscreen?.().catch(() => {}),
+      d(0));
+  }
+  function g() {
+    ((t = !1),
+      a.classList.remove('presenting'),
+      h?.setAttribute('hidden', ''),
+      l?.removeAttribute('hidden'),
+      document.fullscreenElement && document.exitFullscreen());
+  }
+  (l?.addEventListener('click', p),
+    s?.addEventListener('click', g),
+    m?.addEventListener('click', () => d(e - 1)),
+    f?.addEventListener('click', () => d(e + 1)),
+    document.addEventListener('keydown', (i) => {
+      t &&
+        ((i.key === 'ArrowRight' || i.key === 'ArrowDown') && (i.preventDefault(), d(e + 1)),
+        (i.key === 'ArrowLeft' || i.key === 'ArrowUp') && (i.preventDefault(), d(e - 1)));
+    }),
+    document.addEventListener('fullscreenchange', () => {
+      !document.fullscreenElement && t && g();
+    }));
+}
+w();
+const y = document.getElementById('ai-assistant');
+y && B(() => import('./aiAssistant.BqJ8pAhN.js'), []).then((c) => c.mountAssistant(y));

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+# C2{r0b0ts_txt_1s_n0t_s3cr3t}

@@ -1,0 +1,817 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="OSINT — C2Workshop" />
+    <link rel="icon" type="image/svg+xml" href="/LOTF/favicon.svg" />
+    <title>OSINT | C2Workshop</title>
+    <link rel="stylesheet" href="/LOTF/styles.css" />
+  </head>
+  <body>
+    <nav class="site-nav">
+      <a href="/LOTF/" class="nav-logo">C2 <span>Workshop</span></a>
+      <div class="nav-links">
+        <a href="/LOTF/ethical-hacking/">Ethical Hacking</a><a href="/LOTF/crypto/">Crypto</a
+        ><a href="/LOTF/web/">Web</a><a href="/LOTF/ai/">AI</a><a href="/LOTF/locks/">Lockpicking</a
+        ><a href="/LOTF/osint/" aria-current="page">OSINT</a>
+      </div>
+    </nav>
+    <main>
+      <div class="section-page" id="section-container">
+        <div class="section-header">
+          <h1>OSINT<span>.</span></h1>
+          <div style="display: contents">
+            <button id="presentation-toggle" class="btn-present">⛶ Present</button>
+          </div>
+          <div class="presentation-controls" id="presentation-controls" hidden>
+            <button class="nav-arrow" id="prev-slide" aria-label="Previous slide">←</button>
+            <span class="slide-counter" id="slide-counter">1 / 1</span>
+            <button class="nav-arrow" id="next-slide" aria-label="Next slide">→</button>
+            <button class="btn-exit" id="exit-presentation">Exit</button>
+          </div>
+        </div>
+        <div id="slides-container">
+          <section class="slide" id="osint-title" data-slide>
+            <div class="slide-content">
+              <h2>OSINT</h2>
+              <p class="slide-body">
+                Open Source Intelligence — using publicly available information to gather insights about individuals,
+                organizations, and systems. OSINT can be one of the most powerful tools a hacker or cybersecurity
+                professional can use.
+              </p>
+            </div>
+          </section>
+          <section class="slide" id="osint-ethics" data-slide>
+            <div class="slide-content">
+              <h2>Responsibility &amp; Ethics</h2>
+              <p class="slide-body">
+                Be aware of privacy implications when engaging in OSINT research. OSINT should be used for ethical
+                research without causing harm to those involved. Similar to social engineering, you should strive to
+                leave people better off than before you started. WITH GREAT POWER COMES GREAT RESPONSIBILITY!
+              </p>
+            </div>
+          </section>
+          <section class="slide slide--has-image" id="osint-what-is" data-slide>
+            <div class="slide-content">
+              <h2>What is OSINT?</h2>
+              <p class="slide-body">
+                Open Source Intelligence (OSINT) is the collection and analysis of publicly available information.
+                Journalists have used satellite images and social media posts to document war crimes. Researchers have
+                found corporate passwords exposed in plain public search results. Law enforcement has identified
+                suspects from a single background detail in a photo. The same internet you use every day is the tool.
+              </p>
+              <ul class="slide-bullets">
+                <li>Social media platforms</li>
+                <li>News outlets and public records</li>
+                <li>Government publications and filings</li>
+                <li>Academic research and conference proceedings</li>
+                <li>Publicly accessible databases and forums</li>
+              </ul>
+            </div>
+            <div class="slide-media">
+              <img src="/LOTF/images/osint/web.png" alt="" class="slide-image" loading="lazy" />
+            </div>
+          </section>
+          <section class="slide" id="osint-legal" data-slide>
+            <div class="slide-content">
+              <h2>Legal Boundaries</h2>
+              <p class="slide-body">
+                The legal boundaries of OSINT revolve around respecting privacy laws, platform terms of service,
+                intellectual property rights, and ethical standards.
+              </p>
+              <ul class="slide-bullets">
+                <li>Privacy Laws: Be aware of laws governing the collection and use of personal information</li>
+                <li>
+                  Terms of Service: Scraping or accessing restricted areas of platforms may have legal consequences
+                </li>
+                <li>
+                  Intellectual Property: Respect copyrights and trademarks when collecting and distributing information
+                </li>
+                <li>Ethical Considerations: Avoid deceptive practices like impersonation or manipulation</li>
+                <li>
+                  Regulatory Compliance: OSINT may be subject to additional regulations, such as data protection laws
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section class="slide slide--has-image" id="osint-applications" data-slide>
+            <div class="slide-content">
+              <h2>Real-World Applications</h2>
+              <p class="slide-body">
+                OSINT is used across many legitimate fields — but threat actors misuse it too. Many breaches begin with
+                effective OSINT research combined with social engineering.
+              </p>
+              <ul class="slide-bullets">
+                <li>Threat intelligence gathering by security agencies and researchers</li>
+                <li>Investigative journalism to uncover hidden information and corruption</li>
+                <li>Competitive intelligence for understanding market trends</li>
+                <li>Humanitarian crisis monitoring via social media analysis</li>
+                <li>Security research and responsible vulnerability disclosure</li>
+                <li>Attackers: profiling targets, building phishing campaigns, mapping infrastructure</li>
+              </ul>
+            </div>
+            <div class="slide-media">
+              <img src="/LOTF/images/osint/realworld.png" alt="" class="slide-image" loading="lazy" />
+            </div>
+          </section>
+          <section class="slide" id="osint-footprint" data-slide>
+            <div class="slide-content">
+              <h2>Digital Footprints</h2>
+              <p class="slide-body">
+                A digital footprint is the trail of data you leave behind as you engage with digital systems. Every
+                interaction adds to a profile that others — including threat actors — can access.
+              </p>
+              <ul class="slide-bullets">
+                <li>Social Media: Posts, comments, likes, and interactions</li>
+                <li>Web Browsing: Sites visited, search queries, time spent</li>
+                <li>Location Data: GPS data, app check-ins, Google Maps history</li>
+                <li>Online Registrations: Usernames, profile information, account metadata</li>
+                <li>Email: Metadata, attachments, sent and received history</li>
+                <li>Digital Breadcrumbs: IP addresses, user-agent strings, device fingerprints</li>
+              </ul>
+            </div>
+          </section>
+          <section class="slide" id="osint-ai-data" data-slide>
+            <div class="slide-content">
+              <h2>Your Data as Training Data</h2>
+              <p class="slide-body">
+                Every post, photo, check-in, and search you make is publicly accessible — and at scale, that data is
+                scraped and used to train AI models. Individually, each data point seems harmless. Combined, they build
+                a profile more detailed than most people realize.
+              </p>
+              <ul class="slide-bullets">
+                <li>Social media posts reveal your opinions, relationships, and daily routine</li>
+                <li>Photos contain metadata (time, location) and can be used for facial recognition training</li>
+                <li>Writing style and word choice can identify you across anonymous accounts</li>
+                <li>
+                  Behavioral patterns — when you are online, what you engage with — are as revealing as what you post
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section class="slide" id="osint-ai-tools" data-slide>
+            <div class="slide-content">
+              <h2>AI-Powered OSINT</h2>
+              <p class="slide-body">
+                AI doesn&#39;t replace OSINT — it supercharges it. Tasks that once took hours of manual research can now
+                be automated and scaled across thousands of targets simultaneously.
+              </p>
+              <ul class="slide-bullets">
+                <li>
+                  Facial recognition can match a photo against millions of public images to find accounts and locations
+                </li>
+                <li>Natural language models can analyze writing to infer personality, location, or intent</li>
+                <li>AI tools aggregate data across platforms to build profiles from fragments</li>
+                <li>Voice samples from public videos can be cloned with just minutes of audio</li>
+              </ul>
+            </div>
+          </section>
+          <section class="slide" id="osint-ai-social-eng" data-slide>
+            <div class="slide-content">
+              <h2>AI + Social Engineering</h2>
+              <p class="slide-body">
+                Combining OSINT with AI creates some of the most convincing social engineering attacks seen today. The
+                attacker knows everything about you — and now they can sound and look like someone you trust.
+              </p>
+              <ul class="slide-bullets">
+                <li>
+                  Spear phishing: AI generates personalized emails using your name, job, colleagues, and recent activity
+                </li>
+                <li>
+                  Vishing: Voice cloning lets attackers impersonate coworkers, family, or executives on a phone call
+                </li>
+                <li>Deepfakes: AI-generated video calls have been used to authorize fraudulent wire transfers</li>
+                <li>
+                  Synthetic personas: AI builds fake LinkedIn profiles and social histories to gain trust over time
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section class="slide slide--has-image" id="osint-tools" data-slide>
+            <div class="slide-content">
+              <h2>Key OSINT Tools</h2>
+              <p class="slide-body">
+                Beyond search engines, specialized tools help practitioners collect, aggregate, and visualize OSINT
+                data. Most are free and open source — knowing what exists is the first step.
+              </p>
+              <ul class="slide-bullets">
+                <li>Maltego: maps connections between people, domains, IPs, and emails as interactive visual graphs</li>
+                <li>
+                  Shodan: a search engine for internet-connected devices — servers, cameras, and industrial systems
+                </li>
+                <li>theHarvester: automatically collects emails, subdomains, and employee names from public sources</li>
+                <li>
+                  crt.sh: certificate transparency log search — reveals subdomains and infrastructure through SSL
+                  records
+                </li>
+                <li>
+                  OSINT Framework (osintframework.com): a directory of tools organized by the type of data you need
+                </li>
+                <li>Social media, publicly available background check websites, public records, etc.</li>
+              </ul>
+            </div>
+            <div class="slide-media">
+              <img src="/LOTF/images/osint/osintframework.png" alt="" class="slide-image" loading="lazy" />
+            </div>
+          </section>
+          <section class="slide" id="osint-dorking" data-slide>
+            <div class="slide-content">
+              <h2>Google Dorking</h2>
+              <p class="slide-body">
+                Google dorking uses advanced search operators to find information that regular searches miss. These
+                results expose real vulnerabilities — an open directory may contain passwords or private files, a login
+                page may be running unpatched software, a log file may contain live session tokens. Dorking is often one
+                of the first steps in a real-world attack. For more, see the Google Hacking Database (GHDB) at
+                exploit-db.com/google-hacking-database
+              </p>
+              <ul class="slide-bullets">
+                <li>intitle:&quot;Index of&quot; — exposes open directory listings</li>
+                <li>intitle:&quot;Login — WordPress&quot; — finds WordPress admin login pages</li>
+                <li>filetype:log inurl:&quot;access.log&quot; — finds exposed server logs</li>
+                <li>site:example.com inurl:admin — finds admin pages on a specific domain</li>
+              </ul>
+            </div>
+          </section>
+          <section class="slide slide--has-image" id="data-everywhere" data-slide>
+            <div class="slide-content">
+              <h2>Data is Everywhere</h2>
+              <p class="slide-body">
+                In the digital age, data is everywhere. Nearly everything we do results in some sort of digital
+                artifact. This may be a log somewhere, an image taken by someone/something, a social media post,
+                receipts, public records, data used in phone suggestions, location history, etc. All of this data can be
+                used by someone to learn more about you and your behaviors. And, unfortunately, all of this data can be
+                used against you! Some of this is NOT public information but private data can become public very quickly
+                through data breaches, system compromises, or just simple mistakes.
+              </p>
+              <ul class="slide-bullets">
+                <li>
+                  Social media checkins, location tracking, image metadata, system logs, images and posts from other
+                  people, interactions with the internet, images/video from street cameras, etc.
+                </li>
+                <li>
+                  People should know what type of data is out there, and how to potentially avoid having this data used
+                  against them.
+                </li>
+                <li>Data removal is difficult! Once your data is out there, it can be very difficult to get back...</li>
+              </ul>
+            </div>
+            <div class="slide-media">
+              <img src="/LOTF/images/osint/flock_cameras.png" alt="" class="slide-image" loading="lazy" />
+            </div>
+          </section>
+          <div class="challenges-heading">Challenges</div>
+          <div
+            class="challenge-card challenge-multiple-choice"
+            id="card-osint1"
+            data-challenge-id="osint1"
+            data-answer-hash="55ffbf4eb70ddc5f167a6a92fcc29b1455aa0f6e5a2732ef7d68361f6c9898f0"
+          >
+            <div class="challenge-label">Multiple Choice</div>
+            <h3>What should be considered when engaging in and utilizing OSINT?</h3>
+            <ul class="options-list">
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-osint1" value="Privacy Laws" /> Privacy Laws
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-osint1" value="Terms of Service" /> Terms of Service
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-osint1" value="Regulatory Compliance" /> Regulatory Compliance
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-osint1" value="Ethical Considerations" /> Ethical Considerations
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-osint1" value="All of the above" /> All of the above
+                </label>
+              </li>
+            </ul>
+            <div class="challenge-actions">
+              <button class="btn submit-btn" style="margin-top: 1rem">Submit</button>
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>
+                  Think beyond just one category. Privacy laws (like GDPR and CCPA), platform Terms of Service,
+                  copyright law, and ethics each govern a different aspect of what you can collect and how you can use
+                  it.
+                </div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <script type="module">
+            function z(e) {
+              const n = e.match(/(?:^|; )c2p=([^;]*)/);
+              if (!n) return {};
+              try {
+                return JSON.parse(decodeURIComponent(n[1]));
+              } catch {
+                return {};
+              }
+            }
+            function J(e) {
+              return encodeURIComponent(JSON.stringify(e));
+            }
+            function H() {
+              return z(document.cookie);
+            }
+            function O(e) {
+              const n = H();
+              n[e] = !0;
+              const s = J(n);
+              document.cookie = `c2p=${s}; path=/; max-age=${3600 * 24 * 365}; SameSite=Lax`;
+            }
+            function R(e) {
+              return H()[e] === !0;
+            }
+            const $ = "c2-cyber-day::v1::",
+              B = new Uint32Array([
+                1116352408, 1899447441, 3049323471, 3921009573, 961987163, 1508970993, 2453635748, 2870763221,
+                3624381080, 310598401, 607225278, 1426881987, 1925078388, 2162078206, 2614888103, 3248222580,
+                3835390401, 4022224774, 264347078, 604807628, 770255983, 1249150122, 1555081692, 1996064986, 2554220882,
+                2821834349, 2952996808, 3210313671, 3336571891, 3584528711, 113926993, 338241895, 666307205, 773529912,
+                1294757372, 1396182291, 1695183700, 1986661051, 2177026350, 2456956037, 2730485921, 2820302411,
+                3259730800, 3345764771, 3516065817, 3600352804, 4094571909, 275423344, 430227734, 506948616, 659060556,
+                883997877, 958139571, 1322822218, 1537002063, 1747873779, 1955562222, 2024104815, 2227730452,
+                2361852424, 2428436474, 2756734187, 3204031479, 3329325298,
+              ]);
+            function c(e, n) {
+              return ((e >>> n) | (e << (32 - n))) >>> 0;
+            }
+            function D(e) {
+              return (e >>> 0).toString(16).padStart(8, "0");
+            }
+            function K(e) {
+              const n = new TextEncoder().encode(e),
+                s = n.length,
+                i = s * 8,
+                g = (64 - ((s + 1 + 8) % 64)) % 64,
+                a = s + 1 + g + 8,
+                m = new Uint8Array(a);
+              (m.set(n, 0), (m[s] = 128));
+              const f = new DataView(m.buffer);
+              (f.setUint32(a - 8, Math.floor(i / 4294967296)), f.setUint32(a - 4, i >>> 0));
+              let o = 1779033703,
+                h = 3144134277,
+                d = 1013904242,
+                b = 2773480762,
+                v = 1359893119,
+                w = 2600822924,
+                p = 528734635,
+                C = 1541459225;
+              const r = new Uint32Array(64);
+              for (let A = 0; A < a; A += 64) {
+                for (let t = 0; t < 16; t++) r[t] = f.getUint32(A + t * 4);
+                for (let t = 16; t < 64; t++) {
+                  const U = c(r[t - 15], 7) ^ c(r[t - 15], 18) ^ (r[t - 15] >>> 3),
+                    E = c(r[t - 2], 17) ^ c(r[t - 2], 19) ^ (r[t - 2] >>> 10);
+                  r[t] = (r[t - 16] + U + r[t - 7] + E) >>> 0;
+                }
+                let l = o,
+                  S = h,
+                  y = d,
+                  q = b,
+                  u = v,
+                  k = w,
+                  x = p,
+                  L = C;
+                for (let t = 0; t < 64; t++) {
+                  const U = c(u, 6) ^ c(u, 11) ^ c(u, 25),
+                    E = (u & k) ^ (~u & x),
+                    N = (L + U + E + B[t] + r[t]) >>> 0,
+                    T = c(l, 2) ^ c(l, 13) ^ c(l, 22),
+                    I = (l & S) ^ (l & y) ^ (S & y),
+                    j = (T + I) >>> 0;
+                  ((L = x), (x = k), (k = u), (u = (q + N) >>> 0), (q = y), (y = S), (S = l), (l = (N + j) >>> 0));
+                }
+                ((o = (o + l) >>> 0),
+                  (h = (h + S) >>> 0),
+                  (d = (d + y) >>> 0),
+                  (b = (b + q) >>> 0),
+                  (v = (v + u) >>> 0),
+                  (w = (w + k) >>> 0),
+                  (p = (p + x) >>> 0),
+                  (C = (C + L) >>> 0));
+              }
+              return [o, h, d, b, v, w, p, C].map(D).join("");
+            }
+            function M(e) {
+              return e.trim().toLowerCase();
+            }
+            function P(e) {
+              return K($ + M(e));
+            }
+            function V(e) {
+              const n = e.dataset.challengeId,
+                s = e.dataset.answerHash;
+              if (!s) return;
+              const i = e.querySelector(".challenge-feedback"),
+                g = e.querySelector(".hint-toggle"),
+                a = e.querySelector(".hint-text"),
+                m = e.querySelector(".submit-btn");
+              (R(n) && e.classList.add("solved"),
+                g?.addEventListener("click", () => {
+                  a &&
+                    (a.hasAttribute("hidden")
+                      ? (a.removeAttribute("hidden"), (g.textContent = "Hide hint"))
+                      : (a.setAttribute("hidden", ""), (g.textContent = "Show hint")));
+                }));
+              function f() {
+                let o = "";
+                const h = e.querySelector('input[type="radio"]:checked');
+                if (h) o = h.value;
+                else {
+                  const d = e.querySelector(".flag-input");
+                  d && (o = d.value);
+                }
+                if (!o.trim()) {
+                  ((i.textContent = "Please enter an answer."), (i.className = "challenge-feedback incorrect"));
+                  return;
+                }
+                P(o) === s
+                  ? ((i.textContent = "✓ Correct!"),
+                    (i.className = "challenge-feedback correct"),
+                    O(n),
+                    e.classList.add("solved"))
+                  : ((i.textContent = "✗ Not quite. Try again."), (i.className = "challenge-feedback incorrect"));
+              }
+              (m.addEventListener("click", f),
+                e.querySelector(".flag-input")?.addEventListener("keydown", (o) => {
+                  o.key === "Enter" && f();
+                }));
+            }
+            document.querySelectorAll(".challenge-card[data-answer-hash]").forEach(V);
+          </script>
+          <div
+            class="challenge-card challenge-flag-input"
+            id="card-osint2"
+            data-challenge-id="osint2"
+            data-answer-hash="31f1abba2533bb84eba65c2da8b6fbad869037bf250b633fc2292e7bc6c62c4c"
+          >
+            <div class="challenge-label">Flag Challenge</div>
+            <h3>
+              We are looking for a hash used as a subdomain on a domain related to &#39;the-petting-zoo.com&#39;. What
+              is the subdomain?
+            </h3>
+            <div class="flag-input-wrapper">
+              <input
+                type="text"
+                class="flag-input mono"
+                placeholder="Enter flag..."
+                autocomplete="off"
+                spellcheck="false"
+                aria-label="Flag input"
+              />
+              <button class="btn submit-btn">Submit</button>
+            </div>
+            <div class="challenge-actions">
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>
+                  SSL certificate transparency logs are publicly searchable. Try crt.sh — search for the domain and look
+                  for any subdomain entries that look like a hash.
+                </div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-multiple-choice"
+            id="card-osint3"
+            data-challenge-id="osint3"
+            data-answer-hash="4c7d248e97cde22acff2d1967b360f55afe9e673ebe40b9edd66c0c6241a5355"
+          >
+            <div class="challenge-label">Multiple Choice</div>
+            <h3>Our local group (DC702) worked with a computer scientist. Where is Grace from?</h3>
+            <ul class="options-list">
+              <li>
+                <label class="option-label"> <input type="radio" name="mc-osint3" value="Utah" /> Utah </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-osint3" value="California" /> California
+                </label>
+              </li>
+              <li>
+                <label class="option-label"> <input type="radio" name="mc-osint3" value="Nevada" /> Nevada </label>
+              </li>
+              <li>
+                <label class="option-label"> <input type="radio" name="mc-osint3" value="New York" /> New York </label>
+              </li>
+            </ul>
+            <div class="challenge-actions">
+              <button class="btn submit-btn" style="margin-top: 1rem">Submit</button>
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>
+                  Try searching LinkedIn or GitHub for &quot;Grace DC702&quot; or &quot;Grace Las Vegas
+                  cybersecurity.&quot; Her professional profile will show where she is from.
+                </div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-flag-input"
+            id="card-osint4"
+            data-challenge-id="osint4"
+            data-answer-hash="e67305f9ad01a5a5eaf15f6eb2ca6830bb9e5ce1033bf2463c476cc60cd64ef7"
+          >
+            <div class="challenge-label">Flag Challenge</div>
+            <h3>
+              Grace accidentally pushed something sensitive to one of her projects. What is the key used in her
+              encryption project?
+            </h3>
+            <div class="flag-input-wrapper">
+              <input
+                type="text"
+                class="flag-input mono"
+                placeholder="Enter flag..."
+                autocomplete="off"
+                spellcheck="false"
+                aria-label="Flag input"
+              />
+              <button class="btn submit-btn">Submit</button>
+            </div>
+            <div class="challenge-actions">
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>
+                  Find Grace&#39;s GitHub profile and look through her repositories for anything encryption-related.
+                  Check the source code and commit history — secrets are often accidentally committed and visible even
+                  after deletion.
+                </div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-multiple-choice"
+            id="card-osint5"
+            data-challenge-id="osint5"
+            data-answer-hash="2875ad92fce4895eb5efd8d68826a3febe5b6ce8a3a888928afa0a92aea26c20"
+          >
+            <div class="challenge-label">Multiple Choice</div>
+            <h3>Which Google dork finds login pages associated with WordPress?</h3>
+            <ul class="options-list">
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-osint5" value="site:com inurl:invoice" /> site:com inurl:invoice
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-osint5" value="intitle:'OpenVpn Status Monitor'" /> intitle:&#39;OpenVpn
+                  Status Monitor&#39;
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-osint5" value="intitle:&#34;Login — WordPress&#34;" />
+                  intitle:&quot;Login — WordPress&quot;
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-osint5" value="intitle:'Index of' intext:'php' site:*.com.*" />
+                  intitle:&#39;Index of&#39; intext:&#39;php&#39; site:*.com.*
+                </label>
+              </li>
+            </ul>
+            <div class="challenge-actions">
+              <button class="btn submit-btn" style="margin-top: 1rem">Submit</button>
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>
+                  The intitle: operator filters results to pages with a specific string in the title. WordPress login
+                  pages have a distinctive and consistent title. Which option matches that exact pattern?
+                </div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-multiple-choice"
+            id="card-osint6"
+            data-challenge-id="osint6"
+            data-answer-hash="6319f0262d0a2e6daf175decc686d9e71314ef5625ecbab2ca4a5718b0d3c861"
+          >
+            <div class="challenge-label">Multiple Choice</div>
+            <h3>What is a common tool for mapping out information gathered from multiple sources?</h3>
+            <ul class="options-list">
+              <li>
+                <label class="option-label"> <input type="radio" name="mc-osint6" value="nmap" /> nmap </label>
+              </li>
+              <li>
+                <label class="option-label"> <input type="radio" name="mc-osint6" value="Maltego" /> Maltego </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-osint6" value="Metasploit" /> Metasploit
+                </label>
+              </li>
+              <li>
+                <label class="option-label"> <input type="radio" name="mc-osint6" value="DIG" /> DIG </label>
+              </li>
+            </ul>
+            <div class="challenge-actions">
+              <button class="btn submit-btn" style="margin-top: 1rem">Submit</button>
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>
+                  This tool is used by security analysts and investigators to map connections between people, domains,
+                  email addresses, and IP addresses. It visualizes relationships across multiple data sources and is a
+                  staple in professional OSINT investigations.
+                </div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-multiple-choice"
+            id="card-osint7"
+            data-challenge-id="osint7"
+            data-answer-hash="0bc99c82cb1e8bb3e39f85f4bb497fc60844ce9900ee3770232d7ea694a64959"
+          >
+            <div class="challenge-label">Multiple Choice</div>
+            <h3>
+              An attacker wants to impersonate your manager to trick you into sending money. Which combination of AI
+              techniques makes this most convincing?
+            </h3>
+            <ul class="options-list">
+              <li>
+                <label class="option-label">
+                  <input
+                    type="radio"
+                    name="mc-osint7"
+                    value="A deepfake video call using your manager's public photos"
+                  />
+                  A deepfake video call using your manager&#39;s public photos
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input
+                    type="radio"
+                    name="mc-osint7"
+                    value="A voice-cloned phone call using audio from company videos"
+                  />
+                  A voice-cloned phone call using audio from company videos
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input
+                    type="radio"
+                    name="mc-osint7"
+                    value="A spear-phishing email written using your manager's LinkedIn activity"
+                  />
+                  A spear-phishing email written using your manager&#39;s LinkedIn activity
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-osint7" value="All of the above — and attackers combine them" /> All of
+                  the above — and attackers combine them
+                </label>
+              </li>
+            </ul>
+            <div class="challenge-actions">
+              <button class="btn submit-btn" style="margin-top: 1rem">Submit</button>
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>
+                  Each option is a real attack on its own — but sophisticated attackers layer them. A deepfake video
+                  call, a voice-cloned follow-up call, and a spear-phishing email all reinforce each other. Which answer
+                  reflects how real-world business email compromise attacks actually work?
+                </div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-flag-input"
+            id="card-osint8"
+            data-challenge-id="osint8"
+            data-answer-hash="f51da18dae8c8565cfe1fd7ddcecbd0789783d0661d451daa7e13e18d39a21ad"
+          >
+            <div class="challenge-label">Flag Challenge</div>
+            <h3>
+              We are tracking an access point around the valley. We think we have the BSSID but dont want to know the
+              SSID so we can keep an eye out for it. What is the SSID? BSSID: 00:24:C8:70:47:40 -- FLAG Format: SSID
+            </h3>
+            <div class="flag-input-wrapper">
+              <input
+                type="text"
+                class="flag-input mono"
+                placeholder="Enter flag..."
+                autocomplete="off"
+                spellcheck="false"
+                aria-label="Flag input"
+              />
+              <button class="btn submit-btn">Submit</button>
+            </div>
+            <div class="challenge-actions">
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>
+                  A BSSID is the unique MAC address of a Wi-Fi access point. Wardriving databases like WiGLE (wigle.net)
+                  let you search a BSSID to find the SSID (network name) it broadcasts and where it has been spotted.
+                </div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-flag-input"
+            id="card-osint9"
+            data-challenge-id="osint9"
+            data-answer-hash="86381fe567f429da2f5378bc7bddb43638cee024622c3299e4dd378986dbe1dc"
+          >
+            <div class="challenge-label">Flag Challenge</div>
+            <h3>All we know is that the secret was published before.theunknown.space.</h3>
+            <div class="flag-input-wrapper">
+              <input
+                type="text"
+                class="flag-input mono"
+                placeholder="Enter flag..."
+                autocomplete="off"
+                spellcheck="false"
+                aria-label="Flag input"
+              />
+              <button class="btn submit-btn">Submit</button>
+            </div>
+            <div class="challenge-actions">
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>
+                  Heard of the Wayback Machine? It archives snapshots of websites over time. If the secret was published
+                  on a website before.theunknown.space, you can use the Wayback Machine to look at historical versions
+                  of that site and find the secret.
+                </div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+        </div>
+        <div class="resources-section">
+          <h2>For More Information</h2>
+          <div class="resources-grid">
+            <div class="resource-card">
+              <h3>OSINT Techniques</h3>
+              <p>
+                One of the best resources for learning about privacy and various OSINT techniques. Also associated with
+                top books and free content on the subject.
+              </p>
+              <a href="https://www.osinttechniques.com/" target="_blank" rel="noopener noreferrer">Visit →</a>
+            </div>
+            <div class="resource-card">
+              <h3>OSINT Framework</h3>
+              <p>
+                Provides a good overview of various tools for finding different types of data. A good place to get
+                exposure to different data sources and databases.
+              </p>
+              <a href="https://osintframework.com/" target="_blank" rel="noopener noreferrer">Visit →</a>
+            </div>
+            <div class="resource-card">
+              <h3>Google Hacking Database</h3>
+              <p>A large collection of Google Dorks. Maintained by the Exploit DB team.</p>
+              <a href="https://www.exploit-db.com/google-hacking-database" target="_blank" rel="noopener noreferrer"
+                >Visit →</a
+              >
+            </div>
+            <div class="resource-card">
+              <h3>Awesome OSINT</h3>
+              <p>A huge collection of tools, techniques, and data sources on GitHub.</p>
+              <a href="https://github.com/jivoi/awesome-osint" target="_blank" rel="noopener noreferrer">Visit →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <span>C2Society · DC702 · Las Vegas</span>
+      <a href="https://discord.gg/b499UNgBDW">Discord</a>
+    </footer>
+  </body>
+</html>
+<script type="module" src="/LOTF/_astro/_section_.astro_astro_type_script_index_0_lang.-AW0qMox.js"></script>

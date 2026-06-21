@@ -1,0 +1,10 @@
+{
+  "id": 13,
+  "username": "svc_admin",
+  "name": "svc_admin",
+  "role": "admin",
+  "visibility": "private",
+  "joined": "2024-02-15",
+  "note": "Internal admin account — should never be reachable through the public API.",
+  "welcome": "Secret flag: C2{1d0r_3num3r4t10n_ftw}"
+}

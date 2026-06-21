@@ -1,0 +1,757 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ethical Hacking — C2Workshop" />
+    <link rel="icon" type="image/svg+xml" href="/LOTF/favicon.svg" />
+    <title>Ethical Hacking | C2Workshop</title>
+    <link rel="stylesheet" href="/LOTF/styles.css" />
+  </head>
+  <body>
+    <nav class="site-nav">
+      <a href="/LOTF/" class="nav-logo">C2 <span>Workshop</span></a>
+      <div class="nav-links">
+        <a href="/LOTF/ethical-hacking/" aria-current="page">Ethical Hacking</a><a href="/LOTF/crypto/">Crypto</a
+        ><a href="/LOTF/web/">Web</a><a href="/LOTF/ai/">AI</a><a href="/LOTF/locks/">Lockpicking</a
+        ><a href="/LOTF/osint/">OSINT</a>
+      </div>
+    </nav>
+    <main>
+      <div class="section-page" id="section-container">
+        <div class="section-header">
+          <h1>Ethical Hacking<span>.</span></h1>
+          <div style="display: contents">
+            <button id="presentation-toggle" class="btn-present">⛶ Present</button>
+          </div>
+          <div class="presentation-controls" id="presentation-controls" hidden>
+            <button class="nav-arrow" id="prev-slide" aria-label="Previous slide">←</button>
+            <span class="slide-counter" id="slide-counter">1 / 1</span>
+            <button class="nav-arrow" id="next-slide" aria-label="Next slide">→</button>
+            <button class="btn-exit" id="exit-presentation">Exit</button>
+          </div>
+        </div>
+        <div id="slides-container">
+          <section class="slide" id="ethical-hacking-title" data-slide>
+            <div class="slide-content">
+              <h2>Ethical Hacking</h2>
+              <p class="slide-body">
+                Ethical hacking is the practice of LEGALLY and ethically testing systems for vulnerabilities — always
+                with a defined scope, clear goals, and authorization. Laws like the Computer Fraud and Abuse Act (CFAA),
+                the UCMJ, and state computer-crime statutes are always in play. Ethical hackers think like attackers to
+                strengthen defenses, then report their findings to drive positive change. A common methodology runs:
+                Scoping → Reconnaissance → Scanning &amp; Enumeration → Exploitation → Post-Exploitation → Reporting.
+                This is an incredibly broad field with many specialties — from web app pentesting to red teaming to
+                binary exploitation — and a huge variety of tools and techniques. Individuals typically specialize in a
+                few areas, but the mindset and methodology are broadly applicable.
+              </p>
+            </div>
+          </section>
+          <div class="challenges-heading">Challenges</div>
+          <div
+            class="challenge-card challenge-multiple-choice"
+            id="card-eh0_1"
+            data-challenge-id="eh0_1"
+            data-answer-hash="58869657d8e9b50c63de237e750bb4a10bfc403534b38c09e719238ce56d97ef"
+          >
+            <div class="challenge-label">Multiple Choice</div>
+            <h3>What single requirement most separates ethical hacking from criminal hacking?</h3>
+            <ul class="options-list">
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-eh0_1" value="Explicit, legal authorization and a defined scope" />
+                  Explicit, legal authorization and a defined scope
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-eh0_1" value="A faster internet connection than the target" /> A faster
+                  internet connection than the target
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-eh0_1" value="Using only open-source tools" /> Using only open-source
+                  tools
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-eh0_1" value="Staying anonymous behind a VPN" /> Staying anonymous behind
+                  a VPN
+                </label>
+              </li>
+            </ul>
+            <div class="challenge-actions">
+              <button class="btn submit-btn" style="margin-top: 1rem">Submit</button>
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>The presentation put one word in all caps and repeated it: LEGALLY.</div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <script type="module">
+            function z(e) {
+              const n = e.match(/(?:^|; )c2p=([^;]*)/);
+              if (!n) return {};
+              try {
+                return JSON.parse(decodeURIComponent(n[1]));
+              } catch {
+                return {};
+              }
+            }
+            function J(e) {
+              return encodeURIComponent(JSON.stringify(e));
+            }
+            function H() {
+              return z(document.cookie);
+            }
+            function O(e) {
+              const n = H();
+              n[e] = !0;
+              const s = J(n);
+              document.cookie = `c2p=${s}; path=/; max-age=${3600 * 24 * 365}; SameSite=Lax`;
+            }
+            function R(e) {
+              return H()[e] === !0;
+            }
+            const $ = "c2-cyber-day::v1::",
+              B = new Uint32Array([
+                1116352408, 1899447441, 3049323471, 3921009573, 961987163, 1508970993, 2453635748, 2870763221,
+                3624381080, 310598401, 607225278, 1426881987, 1925078388, 2162078206, 2614888103, 3248222580,
+                3835390401, 4022224774, 264347078, 604807628, 770255983, 1249150122, 1555081692, 1996064986, 2554220882,
+                2821834349, 2952996808, 3210313671, 3336571891, 3584528711, 113926993, 338241895, 666307205, 773529912,
+                1294757372, 1396182291, 1695183700, 1986661051, 2177026350, 2456956037, 2730485921, 2820302411,
+                3259730800, 3345764771, 3516065817, 3600352804, 4094571909, 275423344, 430227734, 506948616, 659060556,
+                883997877, 958139571, 1322822218, 1537002063, 1747873779, 1955562222, 2024104815, 2227730452,
+                2361852424, 2428436474, 2756734187, 3204031479, 3329325298,
+              ]);
+            function c(e, n) {
+              return ((e >>> n) | (e << (32 - n))) >>> 0;
+            }
+            function D(e) {
+              return (e >>> 0).toString(16).padStart(8, "0");
+            }
+            function K(e) {
+              const n = new TextEncoder().encode(e),
+                s = n.length,
+                i = s * 8,
+                g = (64 - ((s + 1 + 8) % 64)) % 64,
+                a = s + 1 + g + 8,
+                m = new Uint8Array(a);
+              (m.set(n, 0), (m[s] = 128));
+              const f = new DataView(m.buffer);
+              (f.setUint32(a - 8, Math.floor(i / 4294967296)), f.setUint32(a - 4, i >>> 0));
+              let o = 1779033703,
+                h = 3144134277,
+                d = 1013904242,
+                b = 2773480762,
+                v = 1359893119,
+                w = 2600822924,
+                p = 528734635,
+                C = 1541459225;
+              const r = new Uint32Array(64);
+              for (let A = 0; A < a; A += 64) {
+                for (let t = 0; t < 16; t++) r[t] = f.getUint32(A + t * 4);
+                for (let t = 16; t < 64; t++) {
+                  const U = c(r[t - 15], 7) ^ c(r[t - 15], 18) ^ (r[t - 15] >>> 3),
+                    E = c(r[t - 2], 17) ^ c(r[t - 2], 19) ^ (r[t - 2] >>> 10);
+                  r[t] = (r[t - 16] + U + r[t - 7] + E) >>> 0;
+                }
+                let l = o,
+                  S = h,
+                  y = d,
+                  q = b,
+                  u = v,
+                  k = w,
+                  x = p,
+                  L = C;
+                for (let t = 0; t < 64; t++) {
+                  const U = c(u, 6) ^ c(u, 11) ^ c(u, 25),
+                    E = (u & k) ^ (~u & x),
+                    N = (L + U + E + B[t] + r[t]) >>> 0,
+                    T = c(l, 2) ^ c(l, 13) ^ c(l, 22),
+                    I = (l & S) ^ (l & y) ^ (S & y),
+                    j = (T + I) >>> 0;
+                  ((L = x), (x = k), (k = u), (u = (q + N) >>> 0), (q = y), (y = S), (S = l), (l = (N + j) >>> 0));
+                }
+                ((o = (o + l) >>> 0),
+                  (h = (h + S) >>> 0),
+                  (d = (d + y) >>> 0),
+                  (b = (b + q) >>> 0),
+                  (v = (v + u) >>> 0),
+                  (w = (w + k) >>> 0),
+                  (p = (p + x) >>> 0),
+                  (C = (C + L) >>> 0));
+              }
+              return [o, h, d, b, v, w, p, C].map(D).join("");
+            }
+            function M(e) {
+              return e.trim().toLowerCase();
+            }
+            function P(e) {
+              return K($ + M(e));
+            }
+            function V(e) {
+              const n = e.dataset.challengeId,
+                s = e.dataset.answerHash;
+              if (!s) return;
+              const i = e.querySelector(".challenge-feedback"),
+                g = e.querySelector(".hint-toggle"),
+                a = e.querySelector(".hint-text"),
+                m = e.querySelector(".submit-btn");
+              (R(n) && e.classList.add("solved"),
+                g?.addEventListener("click", () => {
+                  a &&
+                    (a.hasAttribute("hidden")
+                      ? (a.removeAttribute("hidden"), (g.textContent = "Hide hint"))
+                      : (a.setAttribute("hidden", ""), (g.textContent = "Show hint")));
+                }));
+              function f() {
+                let o = "";
+                const h = e.querySelector('input[type="radio"]:checked');
+                if (h) o = h.value;
+                else {
+                  const d = e.querySelector(".flag-input");
+                  d && (o = d.value);
+                }
+                if (!o.trim()) {
+                  ((i.textContent = "Please enter an answer."), (i.className = "challenge-feedback incorrect"));
+                  return;
+                }
+                P(o) === s
+                  ? ((i.textContent = "✓ Correct!"),
+                    (i.className = "challenge-feedback correct"),
+                    O(n),
+                    e.classList.add("solved"))
+                  : ((i.textContent = "✗ Not quite. Try again."), (i.className = "challenge-feedback incorrect"));
+              }
+              (m.addEventListener("click", f),
+                e.querySelector(".flag-input")?.addEventListener("keydown", (o) => {
+                  o.key === "Enter" && f();
+                }));
+            }
+            document.querySelectorAll(".challenge-card[data-answer-hash]").forEach(V);
+          </script>
+          <div
+            class="challenge-card challenge-multiple-choice"
+            id="card-eh0_2"
+            data-challenge-id="eh0_2"
+            data-answer-hash="3c2959faa5b22a1e07347da1c02a93cd8c31bde0178f5ee3758f6a51b11ddd1f"
+          >
+            <div class="challenge-label">Multiple Choice</div>
+            <h3>
+              In the United States, which federal law most directly criminalizes unauthorized access to computer
+              systems?
+            </h3>
+            <ul class="options-list">
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-eh0_2" value="The Computer Fraud and Abuse Act (CFAA)" /> The Computer
+                  Fraud and Abuse Act (CFAA)
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-eh0_2" value="The Digital Millennium Copyright Act (DMCA)" /> The Digital
+                  Millennium Copyright Act (DMCA)
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input
+                    type="radio"
+                    name="mc-eh0_2"
+                    value="The Health Insurance Portability and Accountability Act (HIPAA)"
+                  />
+                  The Health Insurance Portability and Accountability Act (HIPAA)
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-eh0_2" value="The General Data Protection Regulation (GDPR)" /> The
+                  General Data Protection Regulation (GDPR)
+                </label>
+              </li>
+            </ul>
+            <div class="challenge-actions">
+              <button class="btn submit-btn" style="margin-top: 1rem">Submit</button>
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>
+                  It was mentioned alongside the UCMJ and state-level computer-crime laws.
+                </div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-multiple-choice"
+            id="card-eh0_3"
+            data-challenge-id="eh0_3"
+            data-answer-hash="fc7e5d0c8118c05dd5b729cffb6c8ada6c3983894c3d0d6bf2059a98e5b3a6aa"
+          >
+            <div class="challenge-label">Multiple Choice</div>
+            <h3>In a common penetration-testing methodology, which phase comes immediately AFTER reconnaissance?</h3>
+            <ul class="options-list">
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-eh0_3" value="Scanning and Enumeration" /> Scanning and Enumeration
+                </label>
+              </li>
+              <li>
+                <label class="option-label"> <input type="radio" name="mc-eh0_3" value="Reporting" /> Reporting </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-eh0_3" value="Exploitation" /> Exploitation
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-eh0_3" value="Post-Exploitation" /> Post-Exploitation
+                </label>
+              </li>
+            </ul>
+            <div class="challenge-actions">
+              <button class="btn submit-btn" style="margin-top: 1rem">Submit</button>
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>
+                  After passively gathering info, you actively map the attack surface before attacking it.
+                </div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-multiple-choice"
+            id="card-eh0_4"
+            data-challenge-id="eh0_4"
+            data-answer-hash="40e332cac2f2560003639769f3931e5dc3bd36fbb06fd2e17490f8041d4200fc"
+          >
+            <div class="challenge-label">Multiple Choice</div>
+            <h3>Which of the following is an example of PASSIVE reconnaissance?</h3>
+            <ul class="options-list">
+              <li>
+                <label class="option-label">
+                  <input
+                    type="radio"
+                    name="mc-eh0_4"
+                    value="Googling information on an organization and pulling WHOIS records"
+                  />
+                  Googling information on an organization and pulling WHOIS records
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-eh0_4" value="Running an nmap port scan against their servers" /> Running
+                  an nmap port scan against their servers
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-eh0_4" value="Brute-forcing a login page" /> Brute-forcing a login page
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-eh0_4" value="Launching an exploit against a running service" />
+                  Launching an exploit against a running service
+                </label>
+              </li>
+            </ul>
+            <div class="challenge-actions">
+              <button class="btn submit-btn" style="margin-top: 1rem">Submit</button>
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>
+                  Passive recon does not send traffic that directly touches the target’s systems.
+                </div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-multiple-choice"
+            id="card-eh0_5"
+            data-challenge-id="eh0_5"
+            data-answer-hash="3d01cfddaf3506415b121ee70cb58150fb868041a2fe4ba405d9d65e8a40956d"
+          >
+            <div class="challenge-label">Multiple Choice</div>
+            <h3>In a &quot;black box&quot; assessment, what does the tester typically start with?</h3>
+            <ul class="options-list">
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-eh0_5" value="Little to no prior knowledge of the target's internals" />
+                  Little to no prior knowledge of the target&#39;s internals
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-eh0_5" value="Full source code and architecture diagrams" /> Full source
+                  code and architecture diagrams
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-eh0_5" value="Administrator credentials to every system" /> Administrator
+                  credentials to every system
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-eh0_5" value="A complete list of all the vulnerabilities" /> A complete
+                  list of all the vulnerabilities
+                </label>
+              </li>
+            </ul>
+            <div class="challenge-actions">
+              <button class="btn submit-btn" style="margin-top: 1rem">Submit</button>
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>
+                  Contrast it with &quot;white box&quot; (full knowledge) and &quot;gray box&quot; (partial knowledge).
+                </div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-multiple-choice"
+            id="card-eh0_6"
+            data-challenge-id="eh0_6"
+            data-answer-hash="c5480de05512b7e777aad8dffb7970f056d2e8e2b6f8f5f7c18824f1ef7bc65e"
+          >
+            <div class="challenge-label">Multiple Choice</div>
+            <h3>What best describes the &quot;post-exploitation&quot; phase?</h3>
+            <ul class="options-list">
+              <li>
+                <label class="option-label">
+                  <input
+                    type="radio"
+                    name="mc-eh0_6"
+                    value="Actions after gaining access: escalating privileges, pivoting, and establishing persistence"
+                  />
+                  Actions after gaining access: escalating privileges, pivoting, and establishing persistence
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-eh0_6" value="Writing the initial scope document" /> Writing the initial
+                  scope document
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-eh0_6" value="Scanning for open ports" /> Scanning for open ports
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-eh0_6" value="Publicly disclosing the vulnerability" /> Publicly
+                  disclosing the vulnerability
+                </label>
+              </li>
+            </ul>
+            <div class="challenge-actions">
+              <button class="btn submit-btn" style="margin-top: 1rem">Submit</button>
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>
+                  It answers the question: &quot;What do you do once you get access?&quot;
+                </div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-multiple-choice"
+            id="card-eh0_7"
+            data-challenge-id="eh0_7"
+            data-answer-hash="8ae10ffce554735e7a08cd441115f022dd09e55e931ace3ac0ab1577e8ddd29e"
+          >
+            <div class="challenge-label">Multiple Choice</div>
+            <h3>Why is the reporting phase considered one of the most important parts of an engagement?</h3>
+            <ul class="options-list">
+              <li>
+                <label class="option-label">
+                  <input
+                    type="radio"
+                    name="mc-eh0_7"
+                    value="It documents findings so the organization can fix them and improve its security posture"
+                  />
+                  It documents findings so the organization can fix them and improve its security posture
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input
+                    type="radio"
+                    name="mc-eh0_7"
+                    value="It is when the hacker keeps the vulnerabilities secret for later use"
+                  />
+                  It is when the hacker keeps the vulnerabilities secret for later use
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-eh0_7" value="It is optional paperwork that rarely matters" /> It is
+                  optional paperwork that rarely matters
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-eh0_7" value="It is only needed if the test failed" /> It is only needed
+                  if the test failed
+                </label>
+              </li>
+            </ul>
+            <div class="challenge-actions">
+              <button class="btn submit-btn" style="margin-top: 1rem">Submit</button>
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>
+                  The methodology slide tied it to responsible disclosure and &quot;driving positive change.&quot;
+                </div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-multiple-choice"
+            id="card-eh0_8"
+            data-challenge-id="eh0_8"
+            data-answer-hash="08aa552d1faa3a3b4986b22cf4d455b5a359868c17d17174080d96cafe0a5788"
+          >
+            <div class="challenge-label">Multiple Choice</div>
+            <h3>
+              A resource like GTFOBins catalogs how common Unix binaries can be abused to escalate privileges or break
+              out of restricted shells. These &quot;living off the land&quot; techniques rely on what?
+            </h3>
+            <ul class="options-list">
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-eh0_8" value="Legitimate, already-installed binaries being misused" />
+                  Legitimate, already-installed binaries being misused
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-eh0_8" value="Installing custom malware on the target" /> Installing
+                  custom malware on the target
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-eh0_8" value="A zero-day exploit in the Linux kernel" /> A zero-day
+                  exploit in the Linux kernel
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-eh0_8" value="Phishing the system administrator" /> Phishing the system
+                  administrator
+                </label>
+              </li>
+            </ul>
+            <div class="challenge-actions">
+              <button class="btn submit-btn" style="margin-top: 1rem">Submit</button>
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>
+                  The clue is in the phrase: living off the *land* — using what is already there.
+                </div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-flag-input"
+            id="card-eh1"
+            data-challenge-id="eh1"
+            data-answer-hash="08e9388c4f267adb7b8b98ff8ffc9ccc7f5079bcd2af7d9feaee7a105c19e11c"
+          >
+            <div class="challenge-label">Flag Challenge</div>
+            <h3>
+              In December 2021, a critical remote code execution vulnerability in Apache Log4j (nicknamed
+              &quot;Log4Shell&quot;) affected millions of systems. Look it up and submit its CVE identifier (format:
+              CVE-YYYY-NNNNN).
+            </h3>
+            <div class="flag-input-wrapper">
+              <input
+                type="text"
+                class="flag-input mono"
+                placeholder="Enter flag..."
+                autocomplete="off"
+                spellcheck="false"
+                aria-label="Flag input"
+              />
+              <button class="btn submit-btn">Submit</button>
+            </div>
+            <div class="challenge-actions">
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>
+                  Search &quot;Log4Shell CVE&quot; on a vulnerability database like NVD (nvd.nist.gov) or cve.org.
+                </div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-flag-input"
+            id="card-eh2"
+            data-challenge-id="eh2"
+            data-answer-hash="edddda3bfd67d5592267f4cbdde57904d31f139f904437a15daae94287b0bf45"
+          >
+            <div class="challenge-label">Flag Challenge</div>
+            <h3>
+              The 2014 OpenSSL vulnerability nicknamed &quot;Heartbleed&quot; let attackers read chunks of a server’s
+              memory, potentially leaking private keys. Submit its CVE identifier.
+            </h3>
+            <div class="flag-input-wrapper">
+              <input
+                type="text"
+                class="flag-input mono"
+                placeholder="Enter flag..."
+                autocomplete="off"
+                spellcheck="false"
+                aria-label="Flag input"
+              />
+              <button class="btn submit-btn">Submit</button>
+            </div>
+            <div class="challenge-actions">
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>
+                  Search &quot;Heartbleed CVE&quot; — it is one of the most famous CVEs ever assigned.
+                </div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-flag-input"
+            id="card-eh3"
+            data-challenge-id="eh3"
+            data-answer-hash="07af0cd482d1ae18f582a8b67dc2cc58ddce515760e50c97e73bb6ae3aa05c8e"
+          >
+            <div class="challenge-label">Flag Challenge</div>
+            <h3>
+              Vulnerabilities are also classified by weakness type using CWE identifiers. Look up the CWE ID for
+              &quot;Improper Neutralization of Special Elements used in an SQL Command&quot; — better known as SQL
+              Injection.
+            </h3>
+            <div class="flag-input-wrapper">
+              <input
+                type="text"
+                class="flag-input mono"
+                placeholder="Enter flag..."
+                autocomplete="off"
+                spellcheck="false"
+                aria-label="Flag input"
+              />
+              <button class="btn submit-btn">Submit</button>
+            </div>
+            <div class="challenge-actions">
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>
+                  Search &quot;SQL injection CWE&quot; — the CWE catalog is maintained by MITRE.
+                </div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+        </div>
+        <div class="resources-section">
+          <h2>For More Information</h2>
+          <div class="resources-grid">
+            <div class="resource-card">
+              <h3>Hack The Box (HTB)</h3>
+              <p>
+                Hands-on penetration-testing labs and vulnerable machines. The free &quot;Starting Point&quot; track and
+                HTB Academy offer guided, beginner-friendly paths into offensive security.
+              </p>
+              <a href="https://www.hackthebox.com/" target="_blank" rel="noopener noreferrer">Visit →</a>
+            </div>
+            <div class="resource-card">
+              <h3>OffSec</h3>
+              <p>
+                The creators of Kali Linux and the OSCP certification. They maintain Proving Grounds practice labs and
+                publish free learning materials and the Kali distribution.
+              </p>
+              <a href="https://www.offsec.com/" target="_blank" rel="noopener noreferrer">Visit →</a>
+            </div>
+            <div class="resource-card">
+              <h3>pwn.college</h3>
+              <p>
+                A free, university-grade cybersecurity education project (from Arizona State University) covering binary
+                exploitation, reverse engineering, web security, and more.
+              </p>
+              <a href="https://pwn.college/" target="_blank" rel="noopener noreferrer">Visit →</a>
+            </div>
+            <div class="resource-card">
+              <h3>TryHackMe</h3>
+              <p>
+                Beginner-friendly, guided &quot;rooms&quot; and structured learning paths — many of them free. A gentle
+                on-ramp to hands-on hacking before harder platforms.
+              </p>
+              <a href="https://tryhackme.com/" target="_blank" rel="noopener noreferrer">Visit →</a>
+            </div>
+            <div class="resource-card">
+              <h3>GTFOBins</h3>
+              <p>
+                A curated list of Unix binaries that can be abused to bypass local security restrictions — invaluable
+                for understanding privilege escalation and shell breakouts.
+              </p>
+              <a href="https://gtfobins.github.io/" target="_blank" rel="noopener noreferrer">Visit →</a>
+            </div>
+            <div class="resource-card">
+              <h3>Exploit-DB</h3>
+              <p>
+                An archive of public exploits and proof-of-concept code (maintained by OffSec). A great place to
+                research how known vulnerabilities are actually exploited.
+              </p>
+              <a href="https://www.exploit-db.com/" target="_blank" rel="noopener noreferrer">Visit →</a>
+            </div>
+            <div class="resource-card">
+              <h3>CVE / National Vulnerability Database (NVD)</h3>
+              <p>
+                The U.S. National Vulnerability Database. Search CVEs, read vulnerability details, and check CVSS
+                severity scores — exactly the kind of lookup the challenges above require.
+              </p>
+              <a href="https://nvd.nist.gov/" target="_blank" rel="noopener noreferrer">Visit →</a>
+            </div>
+            <div class="resource-card">
+              <h3>OverTheWire</h3>
+              <p>
+                Free &quot;wargames&quot; that teach security concepts through progressively harder challenges, starting
+                with the classic Bandit Linux/SSH wargame.
+              </p>
+              <a href="https://overthewire.org/wargames/" target="_blank" rel="noopener noreferrer">Visit →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <span>C2Society · DC702 · Las Vegas</span>
+      <a href="https://discord.gg/b499UNgBDW">Discord</a>
+    </footer>
+  </body>
+</html>
+<script type="module" src="/LOTF/_astro/_section_.astro_astro_type_script_index_0_lang.-AW0qMox.js"></script>

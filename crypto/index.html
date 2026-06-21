@@ -1,0 +1,980 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Cryptography — C2Workshop" />
+    <link rel="icon" type="image/svg+xml" href="/LOTF/favicon.svg" />
+    <title>Cryptography | C2Workshop</title>
+    <link rel="stylesheet" href="/LOTF/styles.css" />
+  </head>
+  <body>
+    <nav class="site-nav">
+      <a href="/LOTF/" class="nav-logo">C2 <span>Workshop</span></a>
+      <div class="nav-links">
+        <a href="/LOTF/ethical-hacking/">Ethical Hacking</a><a href="/LOTF/crypto/" aria-current="page">Crypto</a
+        ><a href="/LOTF/web/">Web</a><a href="/LOTF/ai/">AI</a><a href="/LOTF/locks/">Lockpicking</a
+        ><a href="/LOTF/osint/">OSINT</a>
+      </div>
+    </nav>
+    <main>
+      <div class="section-page" id="section-container">
+        <div class="section-header">
+          <h1>Cryptography<span>.</span></h1>
+          <div style="display: contents">
+            <button id="presentation-toggle" class="btn-present">⛶ Present</button>
+          </div>
+          <div class="presentation-controls" id="presentation-controls" hidden>
+            <button class="nav-arrow" id="prev-slide" aria-label="Previous slide">←</button>
+            <span class="slide-counter" id="slide-counter">1 / 1</span>
+            <button class="nav-arrow" id="next-slide" aria-label="Next slide">→</button>
+            <button class="btn-exit" id="exit-presentation">Exit</button>
+          </div>
+        </div>
+        <div id="slides-container">
+          <section class="slide" id="crypto-title" data-slide>
+            <div class="slide-content">
+              <h2>Cryptography</h2>
+              <p class="slide-body">
+                Cryptography is the basis for nearly all technologies we use on a daily basis, and without it, modern
+                security collapses (e.g., no privacy, secure communication, secure transactions, trust between parties,
+                no modern access control).
+              </p>
+            </div>
+          </section>
+          <div class="challenges-heading">Challenges</div>
+          <div
+            class="challenge-card challenge-multiple-choice"
+            id="card-crypto0_1"
+            data-challenge-id="crypto0_1"
+            data-answer-hash="8ee4a648a771661e8df5e687a518ac6a0e23a68a458075bad9ddea31969d503e"
+          >
+            <div class="challenge-label">Multiple Choice</div>
+            <h3>
+              Which of the following is a one-way function, meaning it cannot be reversed to recover the original input?
+            </h3>
+            <ul class="options-list">
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-crypto0_1" value="Hash function" /> Hash function
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-crypto0_1" value="Symmetric encryption" /> Symmetric encryption
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-crypto0_1" value="Asymmetric encryption" /> Asymmetric encryption
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-crypto0_1" value="Digital signature" /> Digital signature
+                </label>
+              </li>
+            </ul>
+            <div class="challenge-actions">
+              <button class="btn submit-btn" style="margin-top: 1rem">Submit</button>
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>
+                  A one-way function is easy to compute in one direction but hard to reverse.
+                </div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <script type="module">
+            function z(e) {
+              const n = e.match(/(?:^|; )c2p=([^;]*)/);
+              if (!n) return {};
+              try {
+                return JSON.parse(decodeURIComponent(n[1]));
+              } catch {
+                return {};
+              }
+            }
+            function J(e) {
+              return encodeURIComponent(JSON.stringify(e));
+            }
+            function H() {
+              return z(document.cookie);
+            }
+            function O(e) {
+              const n = H();
+              n[e] = !0;
+              const s = J(n);
+              document.cookie = `c2p=${s}; path=/; max-age=${3600 * 24 * 365}; SameSite=Lax`;
+            }
+            function R(e) {
+              return H()[e] === !0;
+            }
+            const $ = "c2-cyber-day::v1::",
+              B = new Uint32Array([
+                1116352408, 1899447441, 3049323471, 3921009573, 961987163, 1508970993, 2453635748, 2870763221,
+                3624381080, 310598401, 607225278, 1426881987, 1925078388, 2162078206, 2614888103, 3248222580,
+                3835390401, 4022224774, 264347078, 604807628, 770255983, 1249150122, 1555081692, 1996064986, 2554220882,
+                2821834349, 2952996808, 3210313671, 3336571891, 3584528711, 113926993, 338241895, 666307205, 773529912,
+                1294757372, 1396182291, 1695183700, 1986661051, 2177026350, 2456956037, 2730485921, 2820302411,
+                3259730800, 3345764771, 3516065817, 3600352804, 4094571909, 275423344, 430227734, 506948616, 659060556,
+                883997877, 958139571, 1322822218, 1537002063, 1747873779, 1955562222, 2024104815, 2227730452,
+                2361852424, 2428436474, 2756734187, 3204031479, 3329325298,
+              ]);
+            function c(e, n) {
+              return ((e >>> n) | (e << (32 - n))) >>> 0;
+            }
+            function D(e) {
+              return (e >>> 0).toString(16).padStart(8, "0");
+            }
+            function K(e) {
+              const n = new TextEncoder().encode(e),
+                s = n.length,
+                i = s * 8,
+                g = (64 - ((s + 1 + 8) % 64)) % 64,
+                a = s + 1 + g + 8,
+                m = new Uint8Array(a);
+              (m.set(n, 0), (m[s] = 128));
+              const f = new DataView(m.buffer);
+              (f.setUint32(a - 8, Math.floor(i / 4294967296)), f.setUint32(a - 4, i >>> 0));
+              let o = 1779033703,
+                h = 3144134277,
+                d = 1013904242,
+                b = 2773480762,
+                v = 1359893119,
+                w = 2600822924,
+                p = 528734635,
+                C = 1541459225;
+              const r = new Uint32Array(64);
+              for (let A = 0; A < a; A += 64) {
+                for (let t = 0; t < 16; t++) r[t] = f.getUint32(A + t * 4);
+                for (let t = 16; t < 64; t++) {
+                  const U = c(r[t - 15], 7) ^ c(r[t - 15], 18) ^ (r[t - 15] >>> 3),
+                    E = c(r[t - 2], 17) ^ c(r[t - 2], 19) ^ (r[t - 2] >>> 10);
+                  r[t] = (r[t - 16] + U + r[t - 7] + E) >>> 0;
+                }
+                let l = o,
+                  S = h,
+                  y = d,
+                  q = b,
+                  u = v,
+                  k = w,
+                  x = p,
+                  L = C;
+                for (let t = 0; t < 64; t++) {
+                  const U = c(u, 6) ^ c(u, 11) ^ c(u, 25),
+                    E = (u & k) ^ (~u & x),
+                    N = (L + U + E + B[t] + r[t]) >>> 0,
+                    T = c(l, 2) ^ c(l, 13) ^ c(l, 22),
+                    I = (l & S) ^ (l & y) ^ (S & y),
+                    j = (T + I) >>> 0;
+                  ((L = x), (x = k), (k = u), (u = (q + N) >>> 0), (q = y), (y = S), (S = l), (l = (N + j) >>> 0));
+                }
+                ((o = (o + l) >>> 0),
+                  (h = (h + S) >>> 0),
+                  (d = (d + y) >>> 0),
+                  (b = (b + q) >>> 0),
+                  (v = (v + u) >>> 0),
+                  (w = (w + k) >>> 0),
+                  (p = (p + x) >>> 0),
+                  (C = (C + L) >>> 0));
+              }
+              return [o, h, d, b, v, w, p, C].map(D).join("");
+            }
+            function M(e) {
+              return e.trim().toLowerCase();
+            }
+            function P(e) {
+              return K($ + M(e));
+            }
+            function V(e) {
+              const n = e.dataset.challengeId,
+                s = e.dataset.answerHash;
+              if (!s) return;
+              const i = e.querySelector(".challenge-feedback"),
+                g = e.querySelector(".hint-toggle"),
+                a = e.querySelector(".hint-text"),
+                m = e.querySelector(".submit-btn");
+              (R(n) && e.classList.add("solved"),
+                g?.addEventListener("click", () => {
+                  a &&
+                    (a.hasAttribute("hidden")
+                      ? (a.removeAttribute("hidden"), (g.textContent = "Hide hint"))
+                      : (a.setAttribute("hidden", ""), (g.textContent = "Show hint")));
+                }));
+              function f() {
+                let o = "";
+                const h = e.querySelector('input[type="radio"]:checked');
+                if (h) o = h.value;
+                else {
+                  const d = e.querySelector(".flag-input");
+                  d && (o = d.value);
+                }
+                if (!o.trim()) {
+                  ((i.textContent = "Please enter an answer."), (i.className = "challenge-feedback incorrect"));
+                  return;
+                }
+                P(o) === s
+                  ? ((i.textContent = "✓ Correct!"),
+                    (i.className = "challenge-feedback correct"),
+                    O(n),
+                    e.classList.add("solved"))
+                  : ((i.textContent = "✗ Not quite. Try again."), (i.className = "challenge-feedback incorrect"));
+              }
+              (m.addEventListener("click", f),
+                e.querySelector(".flag-input")?.addEventListener("keydown", (o) => {
+                  o.key === "Enter" && f();
+                }));
+            }
+            document.querySelectorAll(".challenge-card[data-answer-hash]").forEach(V);
+          </script>
+          <div
+            class="challenge-card challenge-multiple-choice"
+            id="card-crypto0_2"
+            data-challenge-id="crypto0_2"
+            data-answer-hash="c0fe29fffabfbe9442dac6500ead6d7196ecfc8d1d466fb3ff0d6494b7195573"
+          >
+            <div class="challenge-label">Multiple Choice</div>
+            <h3>When you see a padlock icon next to a website&#39;s URL in your browser, what does it mean?</h3>
+            <ul class="options-list">
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-crypto0_2" value="The website is free of malware" /> The website is free
+                  of malware
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-crypto0_2" value="The website is trustworthy" /> The website is
+                  trustworthy
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input
+                    type="radio"
+                    name="mc-crypto0_2"
+                    value="The connection between you and the website is encrypted"
+                  />
+                  The connection between you and the website is encrypted
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-crypto0_2" value="The website has been approved by Google" /> The website
+                  has been approved by Google
+                </label>
+              </li>
+            </ul>
+            <div class="challenge-actions">
+              <button class="btn submit-btn" style="margin-top: 1rem">Submit</button>
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>
+                  The padlock icon indicates that the connection is secure and the data is encrypted.
+                </div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-multiple-choice"
+            id="card-crypto0_3"
+            data-challenge-id="crypto0_3"
+            data-answer-hash="da226c6022f72836997eca97816f9cee89eafe268039bb9c41d24f2805023077"
+          >
+            <div class="challenge-label">Multiple Choice</div>
+            <h3>What is the term for the original, readable message before it has been encrypted?</h3>
+            <ul class="options-list">
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-crypto0_3" value="Plaintext" /> Plaintext
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-crypto0_3" value="Ciphertext" /> Ciphertext
+                </label>
+              </li>
+              <li>
+                <label class="option-label"> <input type="radio" name="mc-crypto0_3" value="ASCII" /> ASCII </label>
+              </li>
+              <li>
+                <label class="option-label"> <input type="radio" name="mc-crypto0_3" value="Hash" /> Hash </label>
+              </li>
+            </ul>
+            <div class="challenge-actions">
+              <button class="btn submit-btn" style="margin-top: 1rem">Submit</button>
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>The original message before it becomes ciphertext.</div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-multiple-choice"
+            id="card-crypto0_4"
+            data-challenge-id="crypto0_4"
+            data-answer-hash="a28f6beb36db2487b72c40322e671920c17f6af5b3fffdb36e4be44c9bc94b18"
+          >
+            <div class="challenge-label">Multiple Choice</div>
+            <h3>
+              During WWII, the Germans used a rotor-based encryption machine that was famously broken by Allied
+              cryptanalysts at Bletchley Park, including Alan Turing. What was it called?
+            </h3>
+            <ul class="options-list">
+              <li>
+                <label class="option-label"> <input type="radio" name="mc-crypto0_4" value="Enigma" /> Enigma </label>
+              </li>
+              <li>
+                <label class="option-label"> <input type="radio" name="mc-crypto0_4" value="Lorenz" /> Lorenz </label>
+              </li>
+              <li>
+                <label class="option-label"> <input type="radio" name="mc-crypto0_4" value="Purple" /> Purple </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-crypto0_4" value="BlitzTLS" /> BlitzTLS
+                </label>
+              </li>
+            </ul>
+            <div class="challenge-actions">
+              <button class="btn submit-btn" style="margin-top: 1rem">Submit</button>
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>
+                  This machine was used by the Germans during WWII and was famously broken by Allied cryptanalysts.
+                </div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-flag-input"
+            id="card-crypto1"
+            data-challenge-id="crypto1"
+            data-answer-hash="69d8f9fc7ab337dc8ffed2910f0572ffbee9426388fb98df47cf89f252d55c5f"
+          >
+            <div class="challenge-label">Flag Challenge</div>
+            <h3>Decode the following: P2{FCDE}</h3>
+            <div class="flag-input-wrapper">
+              <input
+                type="text"
+                class="flag-input mono"
+                placeholder="Enter flag..."
+                autocomplete="off"
+                spellcheck="false"
+                aria-label="Flag input"
+              />
+              <button class="btn submit-btn">Submit</button>
+            </div>
+            <div class="challenge-actions">
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>Something about rotating letters in a well known way...</div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-flag-input"
+            id="card-crypto2"
+            data-challenge-id="crypto2"
+            data-answer-hash="87dd2cfeab38c528ea359af6b333d643fb7f6c88c8295f0964a7e5f0d9fc629c"
+          >
+            <div class="challenge-label">Flag Challenge</div>
+            <h3>Decode the following: Q2{O ghsd id tfca Qosgof}</h3>
+            <div class="flag-input-wrapper">
+              <input
+                type="text"
+                class="flag-input mono"
+                placeholder="Enter flag..."
+                autocomplete="off"
+                spellcheck="false"
+                aria-label="Flag input"
+              />
+              <button class="btn submit-btn">Submit</button>
+            </div>
+            <div class="challenge-actions">
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>
+                  Something about rotating letters in a slightly different way than before...
+                </div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-flag-input"
+            id="card-crypto3"
+            data-challenge-id="crypto3"
+            data-answer-hash="0f664d0a69027d31c8264d8c44437e7f6d870c4f26e1812005d55128009cdc3b"
+          >
+            <div class="challenge-label">Flag Challenge</div>
+            <h3>3 % 4 = ?</h3>
+            <div class="flag-input-wrapper">
+              <input
+                type="text"
+                class="flag-input mono"
+                placeholder="Enter flag..."
+                autocomplete="off"
+                spellcheck="false"
+                aria-label="Flag input"
+              />
+              <button class="btn submit-btn">Submit</button>
+            </div>
+            <div class="challenge-actions">
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>Basic Modular Arithmetic (no modular inverses/EEA)</div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-flag-input"
+            id="card-crypto4"
+            data-challenge-id="crypto4"
+            data-answer-hash="e3d52720f6a1029b1b41a49684588c8b02a507f8d194a4e47304a32f682b672c"
+          >
+            <div class="challenge-label">Flag Challenge</div>
+            <h3>5 % 4 = ?</h3>
+            <div class="flag-input-wrapper">
+              <input
+                type="text"
+                class="flag-input mono"
+                placeholder="Enter flag..."
+                autocomplete="off"
+                spellcheck="false"
+                aria-label="Flag input"
+              />
+              <button class="btn submit-btn">Submit</button>
+            </div>
+            <div class="challenge-actions">
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>Basic Modular Arithmetic (no modular inverses/EEA)</div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-flag-input"
+            id="card-crypto5"
+            data-challenge-id="crypto5"
+            data-answer-hash="fa57ebe55fe5d2762a2ed1d44560bee52454776c7b57256d4da1540b08b08bd0"
+          >
+            <div class="challenge-label">Flag Challenge</div>
+            <h3>(2 + 2) % 4 = ?</h3>
+            <div class="flag-input-wrapper">
+              <input
+                type="text"
+                class="flag-input mono"
+                placeholder="Enter flag..."
+                autocomplete="off"
+                spellcheck="false"
+                aria-label="Flag input"
+              />
+              <button class="btn submit-btn">Submit</button>
+            </div>
+            <div class="challenge-actions">
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>Basic Modular Arithmetic (no modular inverses/EEA)</div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-flag-input"
+            id="card-crypto6"
+            data-challenge-id="crypto6"
+            data-answer-hash="e3d52720f6a1029b1b41a49684588c8b02a507f8d194a4e47304a32f682b672c"
+          >
+            <div class="challenge-label">Flag Challenge</div>
+            <h3>(3^0) % 7 = ?</h3>
+            <div class="flag-input-wrapper">
+              <input
+                type="text"
+                class="flag-input mono"
+                placeholder="Enter flag..."
+                autocomplete="off"
+                spellcheck="false"
+                aria-label="Flag input"
+              />
+              <button class="btn submit-btn">Submit</button>
+            </div>
+            <div class="challenge-actions">
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>Basic Modular Arithmetic (no modular inverses/EEA)</div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-flag-input"
+            id="card-crypto7"
+            data-challenge-id="crypto7"
+            data-answer-hash="0f664d0a69027d31c8264d8c44437e7f6d870c4f26e1812005d55128009cdc3b"
+          >
+            <div class="challenge-label">Flag Challenge</div>
+            <h3>(3^1) % 7 = ?</h3>
+            <div class="flag-input-wrapper">
+              <input
+                type="text"
+                class="flag-input mono"
+                placeholder="Enter flag..."
+                autocomplete="off"
+                spellcheck="false"
+                aria-label="Flag input"
+              />
+              <button class="btn submit-btn">Submit</button>
+            </div>
+            <div class="challenge-actions">
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>Basic Modular Arithmetic (no modular inverses/EEA)</div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-flag-input"
+            id="card-crypto8"
+            data-challenge-id="crypto8"
+            data-answer-hash="0e8aa4aa215aef91b2112e490515b6038b6f833bbd52b2ac984113265d83318b"
+          >
+            <div class="challenge-label">Flag Challenge</div>
+            <h3>(3^2) % 7 = ?</h3>
+            <div class="flag-input-wrapper">
+              <input
+                type="text"
+                class="flag-input mono"
+                placeholder="Enter flag..."
+                autocomplete="off"
+                spellcheck="false"
+                aria-label="Flag input"
+              />
+              <button class="btn submit-btn">Submit</button>
+            </div>
+            <div class="challenge-actions">
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>Basic Modular Arithmetic (no modular inverses/EEA)</div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-flag-input"
+            id="card-crypto9"
+            data-challenge-id="crypto9"
+            data-answer-hash="12ec01c9272e0f0cae1d05b7ecf74871a5d533a0880b0684fd0ccf3a9c7dc787"
+          >
+            <div class="challenge-label">Flag Challenge</div>
+            <h3>(3^3) % 7 = ?</h3>
+            <div class="flag-input-wrapper">
+              <input
+                type="text"
+                class="flag-input mono"
+                placeholder="Enter flag..."
+                autocomplete="off"
+                spellcheck="false"
+                aria-label="Flag input"
+              />
+              <button class="btn submit-btn">Submit</button>
+            </div>
+            <div class="challenge-actions">
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>Basic Modular Arithmetic (no modular inverses/EEA)</div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-flag-input"
+            id="card-crypto10"
+            data-challenge-id="crypto10"
+            data-answer-hash="419f8d32d297f7418495007805a7f7504472f0c3b63e7a2828adaa01d4621ba6"
+          >
+            <div class="challenge-label">Flag Challenge</div>
+            <h3>(3^4) % 7 = ?</h3>
+            <div class="flag-input-wrapper">
+              <input
+                type="text"
+                class="flag-input mono"
+                placeholder="Enter flag..."
+                autocomplete="off"
+                spellcheck="false"
+                aria-label="Flag input"
+              />
+              <button class="btn submit-btn">Submit</button>
+            </div>
+            <div class="challenge-actions">
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>Basic Modular Arithmetic (no modular inverses/EEA)</div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-flag-input"
+            id="card-crypto11"
+            data-challenge-id="crypto11"
+            data-answer-hash="68e9a6e7d23ada4bee825896d61e8f61a6a0c8228db329d32c28a908ac8e750e"
+          >
+            <div class="challenge-label">Flag Challenge</div>
+            <h3>(3^5) % 7 = ?</h3>
+            <div class="flag-input-wrapper">
+              <input
+                type="text"
+                class="flag-input mono"
+                placeholder="Enter flag..."
+                autocomplete="off"
+                spellcheck="false"
+                aria-label="Flag input"
+              />
+              <button class="btn submit-btn">Submit</button>
+            </div>
+            <div class="challenge-actions">
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>Basic Modular Arithmetic (no modular inverses/EEA)</div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-flag-input"
+            id="card-crypto12"
+            data-challenge-id="crypto12"
+            data-answer-hash="e3d52720f6a1029b1b41a49684588c8b02a507f8d194a4e47304a32f682b672c"
+          >
+            <div class="challenge-label">Flag Challenge</div>
+            <h3>(3^6) % 7 = ?</h3>
+            <div class="flag-input-wrapper">
+              <input
+                type="text"
+                class="flag-input mono"
+                placeholder="Enter flag..."
+                autocomplete="off"
+                spellcheck="false"
+                aria-label="Flag input"
+              />
+              <button class="btn submit-btn">Submit</button>
+            </div>
+            <div class="challenge-actions">
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>Basic Modular Arithmetic (no modular inverses/EEA)</div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-flag-input"
+            id="card-crypto13"
+            data-challenge-id="crypto13"
+            data-answer-hash="0f664d0a69027d31c8264d8c44437e7f6d870c4f26e1812005d55128009cdc3b"
+          >
+            <div class="challenge-label">Flag Challenge</div>
+            <h3>(3^7) % 7 = ?</h3>
+            <div class="flag-input-wrapper">
+              <input
+                type="text"
+                class="flag-input mono"
+                placeholder="Enter flag..."
+                autocomplete="off"
+                spellcheck="false"
+                aria-label="Flag input"
+              />
+              <button class="btn submit-btn">Submit</button>
+            </div>
+            <div class="challenge-actions">
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>Basic Modular Arithmetic (no modular inverses/EEA)</div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-flag-input"
+            id="card-crypto14"
+            data-challenge-id="crypto14"
+            data-answer-hash="8d82f58b47a6f58d5a4020d5cf24cc8cb182f90b94ae1826c25818047107bccd"
+          >
+            <div class="challenge-label">Flag Challenge</div>
+            <h3>Given: p = 4759; q = 3359; Compute N = p * q</h3>
+            <div class="flag-input-wrapper">
+              <input
+                type="text"
+                class="flag-input mono"
+                placeholder="Enter flag..."
+                autocomplete="off"
+                spellcheck="false"
+                aria-label="Flag input"
+              />
+              <button class="btn submit-btn">Submit</button>
+            </div>
+            <div class="challenge-actions">
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>The basics of RSA.</div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-flag-input"
+            id="card-crypto15"
+            data-challenge-id="crypto15"
+            data-answer-hash="ba61923fcd5b37e35943e60289b6ddb2bb3a443498031b14f25923d3c2e494fa"
+          >
+            <div class="challenge-label">Flag Challenge</div>
+            <h3>Compute phi = (p - 1) * (q - 1), where phi is Euler&#39;s Totient Function</h3>
+            <div class="flag-input-wrapper">
+              <input
+                type="text"
+                class="flag-input mono"
+                placeholder="Enter flag..."
+                autocomplete="off"
+                spellcheck="false"
+                aria-label="Flag input"
+              />
+              <button class="btn submit-btn">Submit</button>
+            </div>
+            <div class="challenge-actions">
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>The basics of RSA.</div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-flag-input"
+            id="card-crypto16"
+            data-challenge-id="crypto16"
+            data-answer-hash="201622a2d878eb3d48a76129672c865d48f809b0028c01d96a22f7cc01f2e748"
+          >
+            <div class="challenge-label">Flag Challenge</div>
+            <h3>Given: e = 11; d = 4357463; N = 15953681; Encrypt 42 as (42^e) % N</h3>
+            <div class="flag-input-wrapper">
+              <input
+                type="text"
+                class="flag-input mono"
+                placeholder="Enter flag..."
+                autocomplete="off"
+                spellcheck="false"
+                aria-label="Flag input"
+              />
+              <button class="btn submit-btn">Submit</button>
+            </div>
+            <div class="challenge-actions">
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>The basics of RSA.</div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-flag-input"
+            id="card-crypto17"
+            data-challenge-id="crypto17"
+            data-answer-hash="bbfaadfb18e6f2b3975999dd0a5195f546a5bc8bd67f77354a4bddc09c5b1a46"
+          >
+            <div class="challenge-label">Flag Challenge</div>
+            <h3>Decrypt your answer above as (answer^d) % N</h3>
+            <div class="flag-input-wrapper">
+              <input
+                type="text"
+                class="flag-input mono"
+                placeholder="Enter flag..."
+                autocomplete="off"
+                spellcheck="false"
+                aria-label="Flag input"
+              />
+              <button class="btn submit-btn">Submit</button>
+            </div>
+            <div class="challenge-actions">
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>The basics of RSA.</div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-file-flag-input"
+            id="card-crypto18"
+            data-challenge-id="crypto18"
+            data-answer-hash="9e0f9bce85ec5e20ae087a8b39d1cdbd615210873cbb8903e358ce6fd79f1945"
+          >
+            <div class="challenge-label">File Challenge</div>
+            <h3>Time for some COOKING!</h3>
+            <div class="file-download">
+              <a class="btn btn-ghost" href="/LOTF/files/recipe.txt" download>⬇ Download recipe.txt</a>
+            </div>
+            <div class="flag-input-wrapper">
+              <input
+                type="text"
+                class="flag-input mono"
+                placeholder="Enter flag..."
+                autocomplete="off"
+                spellcheck="false"
+                aria-label="Flag input"
+              />
+              <button class="btn submit-btn">Submit</button>
+            </div>
+            <div class="challenge-actions">
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>
+                  CyberChef seems like a good place to start. Remember, you are decoding (e.g., the REVERSE of
+                  encoding).
+                </div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-file-flag-input"
+            id="card-crypto19"
+            data-challenge-id="crypto19"
+            data-answer-hash="c49ae566123313e9f7ad38ba69a8872fad3d08f61740e30564abd580e9dadd47"
+          >
+            <div class="challenge-label">File Challenge</div>
+            <h3>Just this one time...</h3>
+            <div class="file-download">
+              <a class="btn btn-ghost" href="/LOTF/files/conversation.txt" download>⬇ Download conversation.txt</a>
+            </div>
+            <div class="flag-input-wrapper">
+              <input
+                type="text"
+                class="flag-input mono"
+                placeholder="Enter flag..."
+                autocomplete="off"
+                spellcheck="false"
+                aria-label="Flag input"
+              />
+              <button class="btn submit-btn">Submit</button>
+            </div>
+            <div class="challenge-actions">
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>
+                  What is the first rule of One-Time Pads? (Hint: it is in the name...)
+                </div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-file-flag-input"
+            id="card-crypto20"
+            data-challenge-id="crypto20"
+            data-answer-hash="76d40edfc0796d92b25c0b7f0eda653ce560e6926c03bd5621068884eee85eef"
+          >
+            <div class="challenge-label">File Challenge</div>
+            <h3>The Gambler...</h3>
+            <div class="file-download">
+              <a class="btn btn-ghost" href="/LOTF/files/puzzle.png" download>⬇ Download puzzle.png</a>
+            </div>
+            <div class="flag-input-wrapper">
+              <input
+                type="text"
+                class="flag-input mono"
+                placeholder="Enter flag..."
+                autocomplete="off"
+                spellcheck="false"
+                aria-label="Flag input"
+              />
+              <button class="btn submit-btn">Submit</button>
+            </div>
+            <div class="challenge-actions">
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>
+                  What base is possible with dice? What do all bases have in common? Hint: the starting value may not be
+                  1...
+                </div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+        </div>
+        <div class="resources-section">
+          <h2>For More Information</h2>
+          <div class="resources-grid">
+            <div class="resource-card">
+              <h3>Boxentriq: Cryptography for Beginners</h3>
+              <p>
+                Boxentriq offers a beginner-friendly introduction to cryptography with interactive challenges and
+                tutorials. Students can learn about encryption, decryption, and cryptographic techniques in a hands-on
+                environment.
+              </p>
+              <a href="https://www.boxentriq.com/" target="_blank" rel="noopener noreferrer">Visit →</a>
+            </div>
+            <div class="resource-card">
+              <h3>The Science of Codes: An Intro to Cryptography</h3>
+              <p>
+                Were you fascinated by The Da Vinci Code? You might be interested in Cryptography! There are lots of
+                different ways to encrypt a message, from early, simple ciphers to the famous Enigma machine. Michael
+                Aranda takes you through a fun and cryptic episode of SciShow, all about codes!
+              </p>
+              <a href="https://youtu.be/-yFZGF8FHSg?si=5fhV6hq4vCucD4NN" target="_blank" rel="noopener noreferrer"
+                >Visit →</a
+              >
+            </div>
+            <div class="resource-card">
+              <h3>Cipher Tools: Online Cryptography Playground</h3>
+              <p>
+                Cipher Tools offers CyberChef, an online cryptography playground where students can experiment with
+                various cryptographic operations. They can encode, decode, encrypt, decrypt, and analyze data using
+                different algorithms and techniques in a user-friendly interface.
+              </p>
+              <a href="https://gchq.github.io/CyberChef/" target="_blank" rel="noopener noreferrer">Visit →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <span>C2Society · DC702 · Las Vegas</span>
+      <a href="https://discord.gg/b499UNgBDW">Discord</a>
+    </footer>
+  </body>
+</html>
+<script type="module" src="/LOTF/_astro/_section_.astro_astro_type_script_index_0_lang.-AW0qMox.js"></script>

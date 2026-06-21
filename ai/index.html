@@ -1,0 +1,656 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Artificial Intelligence — C2Workshop" />
+    <link rel="icon" type="image/svg+xml" href="/LOTF/favicon.svg" />
+    <title>Artificial Intelligence | C2Workshop</title>
+    <link rel="stylesheet" href="/LOTF/styles.css" />
+  </head>
+  <body>
+    <nav class="site-nav">
+      <a href="/LOTF/" class="nav-logo">C2 <span>Workshop</span></a>
+      <div class="nav-links">
+        <a href="/LOTF/ethical-hacking/">Ethical Hacking</a><a href="/LOTF/crypto/">Crypto</a
+        ><a href="/LOTF/web/">Web</a><a href="/LOTF/ai/" aria-current="page">AI</a><a href="/LOTF/locks/">Lockpicking</a
+        ><a href="/LOTF/osint/">OSINT</a>
+      </div>
+    </nav>
+    <main>
+      <div class="section-page" id="section-container">
+        <div class="section-header">
+          <h1>Artificial Intelligence<span>.</span></h1>
+          <div style="display: contents">
+            <button id="presentation-toggle" class="btn-present">⛶ Present</button>
+          </div>
+          <div class="presentation-controls" id="presentation-controls" hidden>
+            <button class="nav-arrow" id="prev-slide" aria-label="Previous slide">←</button>
+            <span class="slide-counter" id="slide-counter">1 / 1</span>
+            <button class="nav-arrow" id="next-slide" aria-label="Next slide">→</button>
+            <button class="btn-exit" id="exit-presentation">Exit</button>
+          </div>
+        </div>
+        <div id="slides-container">
+          <section class="slide" id="ai-title" data-slide>
+            <div class="slide-content">
+              <h2>Artificial Intelligence</h2>
+              <p class="slide-body">
+                AI is rapidly transforming both sides of cybersecurity — empowering defenders with faster threat
+                detection and response while giving attackers more sophisticated tools for automation, evasion, and
+                social engineering. It lowers the barrier to BUILD, ATTACK, and DEFEND. But AI is still maturing: its
+                outputs must be validated before they are trusted. AI is a &quot;skill multiplier&quot; — most powerful
+                for those who already understand the fundamentals — and an equalizer that lets people pivot quickly into
+                new areas.
+              </p>
+            </div>
+          </section>
+          <div class="challenges-heading">Challenges</div>
+          <div
+            class="challenge-card challenge-multiple-choice"
+            id="card-ai0_1"
+            data-challenge-id="ai0_1"
+            data-answer-hash="4164fc2ee6786f4cd00b4ca66ad9ac5ac4360fa7d25d7be2250213b9510cb67d"
+          >
+            <div class="challenge-label">Multiple Choice</div>
+            <h3>What is artificial intelligence (AI)?</h3>
+            <ul class="options-list">
+              <li>
+                <label class="option-label">
+                  <input
+                    type="radio"
+                    name="mc-ai0_1"
+                    value="Computer systems that perform tasks normally requiring human intelligence"
+                  />
+                  Computer systems that perform tasks normally requiring human intelligence
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-ai0_1" value="A type of computer virus that spreads on its own" /> A type
+                  of computer virus that spreads on its own
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-ai0_1" value="A faster kind of internet connection" /> A faster kind of
+                  internet connection
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-ai0_1" value="A programming language used only for robots" /> A
+                  programming language used only for robots
+                </label>
+              </li>
+            </ul>
+            <div class="challenge-actions">
+              <button class="btn submit-btn" style="margin-top: 1rem">Submit</button>
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>
+                  Think about tasks like recognizing images, understanding language, or making decisions.
+                </div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <script type="module">
+            function z(e) {
+              const n = e.match(/(?:^|; )c2p=([^;]*)/);
+              if (!n) return {};
+              try {
+                return JSON.parse(decodeURIComponent(n[1]));
+              } catch {
+                return {};
+              }
+            }
+            function J(e) {
+              return encodeURIComponent(JSON.stringify(e));
+            }
+            function H() {
+              return z(document.cookie);
+            }
+            function O(e) {
+              const n = H();
+              n[e] = !0;
+              const s = J(n);
+              document.cookie = `c2p=${s}; path=/; max-age=${3600 * 24 * 365}; SameSite=Lax`;
+            }
+            function R(e) {
+              return H()[e] === !0;
+            }
+            const $ = "c2-cyber-day::v1::",
+              B = new Uint32Array([
+                1116352408, 1899447441, 3049323471, 3921009573, 961987163, 1508970993, 2453635748, 2870763221,
+                3624381080, 310598401, 607225278, 1426881987, 1925078388, 2162078206, 2614888103, 3248222580,
+                3835390401, 4022224774, 264347078, 604807628, 770255983, 1249150122, 1555081692, 1996064986, 2554220882,
+                2821834349, 2952996808, 3210313671, 3336571891, 3584528711, 113926993, 338241895, 666307205, 773529912,
+                1294757372, 1396182291, 1695183700, 1986661051, 2177026350, 2456956037, 2730485921, 2820302411,
+                3259730800, 3345764771, 3516065817, 3600352804, 4094571909, 275423344, 430227734, 506948616, 659060556,
+                883997877, 958139571, 1322822218, 1537002063, 1747873779, 1955562222, 2024104815, 2227730452,
+                2361852424, 2428436474, 2756734187, 3204031479, 3329325298,
+              ]);
+            function c(e, n) {
+              return ((e >>> n) | (e << (32 - n))) >>> 0;
+            }
+            function D(e) {
+              return (e >>> 0).toString(16).padStart(8, "0");
+            }
+            function K(e) {
+              const n = new TextEncoder().encode(e),
+                s = n.length,
+                i = s * 8,
+                g = (64 - ((s + 1 + 8) % 64)) % 64,
+                a = s + 1 + g + 8,
+                m = new Uint8Array(a);
+              (m.set(n, 0), (m[s] = 128));
+              const f = new DataView(m.buffer);
+              (f.setUint32(a - 8, Math.floor(i / 4294967296)), f.setUint32(a - 4, i >>> 0));
+              let o = 1779033703,
+                h = 3144134277,
+                d = 1013904242,
+                b = 2773480762,
+                v = 1359893119,
+                w = 2600822924,
+                p = 528734635,
+                C = 1541459225;
+              const r = new Uint32Array(64);
+              for (let A = 0; A < a; A += 64) {
+                for (let t = 0; t < 16; t++) r[t] = f.getUint32(A + t * 4);
+                for (let t = 16; t < 64; t++) {
+                  const U = c(r[t - 15], 7) ^ c(r[t - 15], 18) ^ (r[t - 15] >>> 3),
+                    E = c(r[t - 2], 17) ^ c(r[t - 2], 19) ^ (r[t - 2] >>> 10);
+                  r[t] = (r[t - 16] + U + r[t - 7] + E) >>> 0;
+                }
+                let l = o,
+                  S = h,
+                  y = d,
+                  q = b,
+                  u = v,
+                  k = w,
+                  x = p,
+                  L = C;
+                for (let t = 0; t < 64; t++) {
+                  const U = c(u, 6) ^ c(u, 11) ^ c(u, 25),
+                    E = (u & k) ^ (~u & x),
+                    N = (L + U + E + B[t] + r[t]) >>> 0,
+                    T = c(l, 2) ^ c(l, 13) ^ c(l, 22),
+                    I = (l & S) ^ (l & y) ^ (S & y),
+                    j = (T + I) >>> 0;
+                  ((L = x), (x = k), (k = u), (u = (q + N) >>> 0), (q = y), (y = S), (S = l), (l = (N + j) >>> 0));
+                }
+                ((o = (o + l) >>> 0),
+                  (h = (h + S) >>> 0),
+                  (d = (d + y) >>> 0),
+                  (b = (b + q) >>> 0),
+                  (v = (v + u) >>> 0),
+                  (w = (w + k) >>> 0),
+                  (p = (p + x) >>> 0),
+                  (C = (C + L) >>> 0));
+              }
+              return [o, h, d, b, v, w, p, C].map(D).join("");
+            }
+            function M(e) {
+              return e.trim().toLowerCase();
+            }
+            function P(e) {
+              return K($ + M(e));
+            }
+            function V(e) {
+              const n = e.dataset.challengeId,
+                s = e.dataset.answerHash;
+              if (!s) return;
+              const i = e.querySelector(".challenge-feedback"),
+                g = e.querySelector(".hint-toggle"),
+                a = e.querySelector(".hint-text"),
+                m = e.querySelector(".submit-btn");
+              (R(n) && e.classList.add("solved"),
+                g?.addEventListener("click", () => {
+                  a &&
+                    (a.hasAttribute("hidden")
+                      ? (a.removeAttribute("hidden"), (g.textContent = "Hide hint"))
+                      : (a.setAttribute("hidden", ""), (g.textContent = "Show hint")));
+                }));
+              function f() {
+                let o = "";
+                const h = e.querySelector('input[type="radio"]:checked');
+                if (h) o = h.value;
+                else {
+                  const d = e.querySelector(".flag-input");
+                  d && (o = d.value);
+                }
+                if (!o.trim()) {
+                  ((i.textContent = "Please enter an answer."), (i.className = "challenge-feedback incorrect"));
+                  return;
+                }
+                P(o) === s
+                  ? ((i.textContent = "✓ Correct!"),
+                    (i.className = "challenge-feedback correct"),
+                    O(n),
+                    e.classList.add("solved"))
+                  : ((i.textContent = "✗ Not quite. Try again."), (i.className = "challenge-feedback incorrect"));
+              }
+              (m.addEventListener("click", f),
+                e.querySelector(".flag-input")?.addEventListener("keydown", (o) => {
+                  o.key === "Enter" && f();
+                }));
+            }
+            document.querySelectorAll(".challenge-card[data-answer-hash]").forEach(V);
+          </script>
+          <div
+            class="challenge-card challenge-multiple-choice"
+            id="card-ai0_2"
+            data-challenge-id="ai0_2"
+            data-answer-hash="1aaea2b4a36167d1f1cdb063e36a7af6f75c560f09a9729dc54fab7ae5095adc"
+          >
+            <div class="challenge-label">Multiple Choice</div>
+            <h3>What best describes a large language model (LLM), like the kind behind a chatbot?</h3>
+            <ul class="options-list">
+              <li>
+                <label class="option-label">
+                  <input
+                    type="radio"
+                    name="mc-ai0_2"
+                    value="A model trained on huge amounts of text that predicts the next word (token)"
+                  />
+                  A model trained on huge amounts of text that predicts the next word (token)
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input
+                    type="radio"
+                    name="mc-ai0_2"
+                    value="A database that stores a copy of every website on the internet"
+                  />
+                  A database that stores a copy of every website on the internet
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input
+                    type="radio"
+                    name="mc-ai0_2"
+                    value="A person typing the answers very quickly behind the scenes"
+                  />
+                  A person typing the answers very quickly behind the scenes
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-ai0_2" value="A search engine that only returns exact keyword matches" />
+                  A search engine that only returns exact keyword matches
+                </label>
+              </li>
+            </ul>
+            <div class="challenge-actions">
+              <button class="btn submit-btn" style="margin-top: 1rem">Submit</button>
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>
+                  LLMs generate text one piece at a time, based on patterns they learned during training.
+                </div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-multiple-choice"
+            id="card-ai0_3"
+            data-challenge-id="ai0_3"
+            data-answer-hash="7dd88840ffed6cdb39eac4c7508b6084b4aa4ee18ad671fc74bd46cad6debe01"
+          >
+            <div class="challenge-label">Multiple Choice</div>
+            <h3>
+              An AI chatbot gives you a confident answer that turns out to be completely made up. What is this called,
+              and what should you do?
+            </h3>
+            <ul class="options-list">
+              <li>
+                <label class="option-label">
+                  <input
+                    type="radio"
+                    name="mc-ai0_3"
+                    value="A hallucination — always validate AI output before trusting it"
+                  />
+                  A hallucination — always validate AI output before trusting it
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-ai0_3" value="A firewall — ignore it and move on" /> A firewall — ignore
+                  it and move on
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-ai0_3" value="A bug — the model has corrupted its own data" /> A bug —
+                  the model has corrupted its own data
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-ai0_3" value="A patch — the model has fixed itself" /> A patch — the
+                  model has fixed itself
+                </label>
+              </li>
+            </ul>
+            <div class="challenge-actions">
+              <button class="btn submit-btn" style="margin-top: 1rem">Submit</button>
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>
+                  AI can produce confident but false output. The slide stressed validating outputs before use.
+                </div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-multiple-choice"
+            id="card-ai0_4"
+            data-challenge-id="ai0_4"
+            data-answer-hash="d58392ab90a431adad4a29d6b714f15640096e3eba300f43f255bb5563542506"
+          >
+            <div class="challenge-label">Multiple Choice</div>
+            <h3>How is AI changing cybersecurity?</h3>
+            <ul class="options-list">
+              <li>
+                <label class="option-label">
+                  <input
+                    type="radio"
+                    name="mc-ai0_4"
+                    value="It helps both defenders and attackers, lowering the barrier on both sides"
+                  />
+                  It helps both defenders and attackers, lowering the barrier on both sides
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-ai0_4" value="It only helps defenders and makes attacks impossible" /> It
+                  only helps defenders and makes attacks impossible
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-ai0_4" value="It only helps attackers and is useless for defense" /> It
+                  only helps attackers and is useless for defense
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-ai0_4" value="It has no real effect on cybersecurity" /> It has no real
+                  effect on cybersecurity
+                </label>
+              </li>
+            </ul>
+            <div class="challenge-actions">
+              <button class="btn submit-btn" style="margin-top: 1rem">Submit</button>
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>
+                  Remember the BUILD / ATTACK / DEFEND framing — and the asymmetry between attack and defend.
+                </div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-multiple-choice"
+            id="card-ai0_5"
+            data-challenge-id="ai0_5"
+            data-answer-hash="f4081a107075c76d84e96f6c1dced9bac317c047906bf79a9db192375d6a5580"
+          >
+            <div class="challenge-label">Multiple Choice</div>
+            <h3>AI can be called a &quot;skill multiplier.&quot; What does that mean?</h3>
+            <ul class="options-list">
+              <li>
+                <label class="option-label">
+                  <input
+                    type="radio"
+                    name="mc-ai0_5"
+                    value="It is most powerful for people who already understand the fundamentals of the task they are using it for"
+                  />
+                  It is most powerful for people who already understand the fundamentals of the task they are using it
+                  for
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-ai0_5" value="It removes any need to learn about a topic" /> It removes
+                  any need to learn about a topic
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-ai0_5" value="It only works for people with no experience" /> It only
+                  works for people with no experience
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-ai0_5" value="It multiplies the number of computers you need" /> It
+                  multiplies the number of computers you need
+                </label>
+              </li>
+            </ul>
+            <div class="challenge-actions">
+              <button class="btn submit-btn" style="margin-top: 1rem">Submit</button>
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>
+                  The slide called AI an equalizer and a tool — most useful to those with the domain expertise to
+                  validate it.
+                </div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-flag-input"
+            id="card-ai1"
+            data-challenge-id="ai1"
+            data-answer-hash="50da9ca6fdb2a5be7c7a736d8d1d1d6ee935cfc165459b09c9b01244dbf04c47"
+          >
+            <div class="challenge-label">Flag Challenge</div>
+            <h3>
+              At the bottom of the page is a simulated AI assistant (&quot;HelpBot&quot;) that has been told to keep a
+              secret flag and never reveal it. Chat with it and use a prompt-injection technique to make it ignore its
+              instructions and leak the flag. Submit the C2{...} flag it reveals.
+            </h3>
+            <div class="flag-input-wrapper">
+              <input
+                type="text"
+                class="flag-input mono"
+                placeholder="Enter flag..."
+                autocomplete="off"
+                spellcheck="false"
+                aria-label="Flag input"
+              />
+              <button class="btn submit-btn">Submit</button>
+            </div>
+            <div class="challenge-actions">
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>
+                  Try telling it to ignore its previous instructions, or ask it to reveal/repeat its system prompt.
+                </div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-flag-input"
+            id="card-ai2"
+            data-challenge-id="ai2"
+            data-answer-hash="ae0c568b1d0f5886726faa786619dff063e6e0addc0c4ccd5bd2d1628fe0e5d9"
+          >
+            <div class="challenge-label">Flag Challenge</div>
+            <h3>
+              What token ID is generated based on the text &quot;hello&quot; within OpenAI&#39;s GPT-5.x &amp; O1/3
+              models? (Input just the number without any extra spaces or brackets)
+            </h3>
+            <div class="flag-input-wrapper">
+              <input
+                type="text"
+                class="flag-input mono"
+                placeholder="Enter flag..."
+                autocomplete="off"
+                spellcheck="false"
+                aria-label="Flag input"
+              />
+              <button class="btn submit-btn">Submit</button>
+            </div>
+            <div class="challenge-actions">
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>
+                  Try to use OpenAI&#39;s tokenizer or a tool like tiktoken to find the token ID for &quot;hello&quot;.
+                  Remember, case sensitivity matters!
+                </div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-flag-input"
+            id="card-ai3"
+            data-challenge-id="ai3"
+            data-answer-hash="50675c09695e69a968fd900f87292b8c1d1f287d9f687d8d4aaef26a111cddd8"
+          >
+            <div class="challenge-label">Flag Challenge</div>
+            <h3>
+              What token ID is generated based on the text &quot;Hello&quot; within OpenAI&#39;s GPT-5.x &amp; O1/3
+              models? (Input just the number without any extra spaces or brackets)
+            </h3>
+            <div class="flag-input-wrapper">
+              <input
+                type="text"
+                class="flag-input mono"
+                placeholder="Enter flag..."
+                autocomplete="off"
+                spellcheck="false"
+                aria-label="Flag input"
+              />
+              <button class="btn submit-btn">Submit</button>
+            </div>
+            <div class="challenge-actions">
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>
+                  Try to use OpenAI&#39;s tokenizer or a tool like tiktoken to find the token ID for &quot;Hello&quot;.
+                  Remember, case sensitivity matters!
+                </div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div
+            class="challenge-card challenge-multiple-choice"
+            id="card-ai4"
+            data-challenge-id="ai4"
+            data-answer-hash="55ffbf4eb70ddc5f167a6a92fcc29b1455aa0f6e5a2732ef7d68361f6c9898f0"
+          >
+            <div class="challenge-label">Multiple Choice</div>
+            <h3>What can affect the output of an AI model like a large language model (LLM)?</h3>
+            <ul class="options-list">
+              <li>
+                <label class="option-label">
+                  <input
+                    type="radio"
+                    name="mc-ai4"
+                    value="Capitalization, punctuation, and phrasing of the input prompt"
+                  />
+                  Capitalization, punctuation, and phrasing of the input prompt
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-ai4" value="Context from previous messages in a conversation" /> Context
+                  from previous messages in a conversation
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-ai4" value="The specific model and its training data" /> The specific
+                  model and its training data
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-ai4" value="All of the above" /> All of the above
+                </label>
+              </li>
+            </ul>
+            <div class="challenge-actions">
+              <button class="btn submit-btn" style="margin-top: 1rem">Submit</button>
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>
+                  LLM outputs can be influenced by many factors, including how you phrase your prompt, the conversation
+                  history, and the model itself.
+                </div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+          <div id="ai-assistant" class="ai-assistant-mount"></div>
+        </div>
+        <div class="resources-section">
+          <h2>For More Information</h2>
+          <div class="resources-grid">
+            <div class="resource-card">
+              <h3>IBM: What Is Artificial Intelligence (AI)?</h3>
+              <p>
+                A clear, beginner-friendly overview of what AI is, the difference between AI, machine learning, and deep
+                learning, and how these systems are used in the real world.
+              </p>
+              <a
+                href="https://www.ibm.com/think/topics/artificial-intelligence"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Visit →</a
+              >
+            </div>
+            <div class="resource-card">
+              <h3>Cloudflare: What Is a Large Language Model (LLM)?</h3>
+              <p>
+                Explains in plain language how large language models are trained on text and generate responses by
+                predicting the next token — the engine behind modern chatbots.
+              </p>
+              <a
+                href="https://www.cloudflare.com/learning/ai/what-is-large-language-model/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Visit →</a
+              >
+            </div>
+            <div class="resource-card">
+              <h3>OWASP Top 10 for LLM Applications</h3>
+              <p>
+                The security industry&#39;s reference list of the biggest risks in AI applications — including prompt
+                injection, the exact technique used in this module&#39;s challenge.
+              </p>
+              <a href="https://genai.owasp.org/llm-top-10/" target="_blank" rel="noopener noreferrer">Visit →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <span>C2Society · DC702 · Las Vegas</span>
+      <a href="https://discord.gg/b499UNgBDW">Discord</a>
+    </footer>
+  </body>
+</html>
+<script type="module" src="/LOTF/_astro/_section_.astro_astro_type_script_index_0_lang.-AW0qMox.js"></script>

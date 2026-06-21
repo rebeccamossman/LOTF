@@ -1,0 +1,9 @@
+{
+  "id": 1,
+  "username": "alice",
+  "name": "Alice Nguyen",
+  "role": "member",
+  "visibility": "public",
+  "joined": "2024-02-15",
+  "welcome": "great to see you back!"
+}

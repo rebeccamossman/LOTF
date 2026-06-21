@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Social Engineering &amp; Phishing — Leaders of the Future - Cybersecurity Workshop" />
+    <link rel="icon" type="image/svg+xml" href="/LOTF/favicon.svg" />
+    <title>Social Engineering &amp; Phishing | Leaders of the Future - Cybersecurity Workshop</title>
+    <link rel="stylesheet" href="/LOTF/styles.css" />
+  </head>
+  <body>
+    <nav class="site-nav">
+      <a href="/LOTF/" class="nav-logo">Leaders of the Future <span>Cybersecurity Workshop</span></a>
+      <div class="nav-links">
+        <a href="/LOTF/ethical-hacking/">Ethical Hacking</a>
+        <a href="/LOTF/social-engineering/" aria-current="page">Social Engineering</a>
+        <a href="/LOTF/crypto/">Crypto</a>
+        <a href="/LOTF/web/">Web</a>
+        <a href="/LOTF/ai/">AI</a>
+        <a href="/LOTF/osint/">OSINT</a>
+        <a href="/LOTF/about/">About</a>
+      </div>
+    </nav>
+    <main>
+      <div class="section-page" id="section-container">
+        <div class="section-header">
+          <h1>Social Engineering &amp; Phishing<span>.</span></h1>
+          <div style="display: contents">
+            <button id="presentation-toggle" class="btn-present">⛶ Present</button>
+          </div>
+          <div class="presentation-controls" id="presentation-controls" hidden>
+            <button class="nav-arrow" id="prev-slide" aria-label="Previous slide">←</button>
+            <span class="slide-counter" id="slide-counter">1 / 1</span>
+            <button class="nav-arrow" id="next-slide" aria-label="Next slide">→</button>
+            <button class="btn-exit" id="exit-presentation">Exit</button>
+          </div>
+        </div>
+
+        <div id="slides-container">
+
+          <section class="slide" id="se-intro" data-slide>
+            <div class="slide-content">
+              <h2>What Is Social Engineering?</h2>
+              <p class="slide-body">
+                Most cyberattacks don't start by breaking through firewalls or cracking passwords — they start by
+                tricking a person. Social engineering is the art of manipulating people psychologically to give up
+                information, click a link, or take an action they shouldn't. It works because it exploits human nature:
+                our tendency to trust, to help, to comply with authority, and to act fast when we feel urgency or fear.
+                The attacker's best tool is not a computer — it's you.
+              </p>
+            </div>
+          </section>
+
+          <section class="slide" id="se-why-it-works" data-slide>
+            <div class="slide-content">
+              <h2>Why Does It Work?</h2>
+              <p class="slide-body">
+                Social engineering exploits deeply wired psychological instincts. Attackers count on these every time:
+              </p>
+              <ul class="slide-bullets">
+                <li><strong>Authority</strong> — We follow instructions from people who seem to be in charge ("IT Support here, I need your password to fix your account").</li>
+                <li><strong>Urgency &amp; Fear</strong> — Panic short-circuits careful thinking ("Your account will be deleted in 24 hours — act now!").</li>
+                <li><strong>Trust &amp; Familiarity</strong> — We lower our guard with names, logos, and people we recognize ("Your friend Alex shared a file with you").</li>
+                <li><strong>Curiosity</strong> — We can't resist clicking something intriguing ("You won't believe what this video caught on camera").</li>
+                <li><strong>Reciprocity</strong> — When someone does something for us, we feel obligated to return the favor.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="slide" id="se-phishing" data-slide>
+            <div class="slide-content">
+              <h2>Phishing</h2>
+              <p class="slide-body">
+                Phishing is the most common form of social engineering — a fake message designed to look legitimate that
+                tricks you into handing over credentials, clicking malware, or sending money. The name comes from
+                "fishing": casting a wide net and waiting for someone to bite. A convincing phishing email might:
+              </p>
+              <ul class="slide-bullets">
+                <li>Pretend to be from Apple, Google, your bank, or your school.</li>
+                <li>Include your real name and personal details scraped from social media.</li>
+                <li>Link to a fake login page that looks pixel-perfect but steals your password.</li>
+                <li>Create a deadline: "Verify your account in the next hour or lose access forever."</li>
+                <li>Come from an address like support@apple-security-alert.com — not apple.com.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="slide" id="se-types" data-slide>
+            <div class="slide-content">
+              <h2>Types of Attacks</h2>
+              <p class="slide-body">
+                Social engineering comes in many forms — not just email. Knowing the names helps you recognize the
+                playbook when you see it:
+              </p>
+              <ul class="slide-bullets">
+                <li><strong>Phishing</strong> — Mass email attacks impersonating trusted brands or services.</li>
+                <li><strong>Spear Phishing</strong> — A targeted attack using personal details about you specifically. Far more convincing than generic phishing.</li>
+                <li><strong>Vishing</strong> — Voice phishing over the phone. "Hi, this is Microsoft Support, we've detected a virus on your computer."</li>
+                <li><strong>Smishing</strong> — Phishing via SMS/text message. "Your USPS package is on hold — click here to reschedule delivery."</li>
+                <li><strong>Pretexting</strong> — Building a fake backstory to extract information ("I'm from your school's IT department running a security audit").</li>
+                <li><strong>Baiting</strong> — Leaving a malware-loaded USB drive somewhere, hoping curiosity makes someone plug it in.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="slide" id="se-real-world" data-slide>
+            <div class="slide-content">
+              <h2>Real-World Scenarios</h2>
+              <p class="slide-body">
+                Social engineering attacks are everywhere — including in the places teens spend the most time online:
+              </p>
+              <ul class="slide-bullets">
+                <li><strong>Instagram / TikTok account takeover</strong> — "You've been flagged for a copyright violation. Verify your account here within 24 hours or it will be permanently removed." The link goes to a fake Meta login page.</li>
+                <li><strong>Gaming scams</strong> — "Win free Robux / V-Bucks! Log in with your account to claim your prize." Your credentials are harvested instantly.</li>
+                <li><strong>Fake job offers</strong> — A job that pays well and only needs your Social Security number and bank account for direct deposit. You're now an identity theft victim.</li>
+                <li><strong>Package delivery texts</strong> — "Your Amazon package couldn't be delivered. Pay a $2.99 redelivery fee here." The card you enter gets charged much more.</li>
+                <li><strong>Friend impersonation</strong> — "Hey it's me, I lost my phone and I'm stranded — can you Venmo me $50? I'll pay you back tomorrow."</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="slide" id="se-red-flags" data-slide>
+            <div class="slide-content">
+              <h2>Red Flags to Watch For</h2>
+              <p class="slide-body">
+                Pause before you click, tap, or reply. These are the most reliable warning signs:
+              </p>
+              <ul class="slide-bullets">
+                <li>Urgency or threats — "Act NOW or lose your account forever."</li>
+                <li>Unexpected requests — You weren't expecting this message, package notice, or call.</li>
+                <li>Mismatched sender address — The display name says "PayPal" but the email is from paypa1-support@gmail.com.</li>
+                <li>Requests for credentials, payment, or personal info — Legitimate companies almost never ask for your password.</li>
+                <li>Suspicious links — Hover before you click. Does the URL match where it claims to go?</li>
+                <li>Too good to be true — Free gift cards, prize winnings, or unusually high-paying remote jobs.</li>
+                <li>Pressure to keep it secret — "Don't tell anyone about this offer." Legitimate things don't need secrecy.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="slide" id="se-defend" data-slide>
+            <div class="slide-content">
+              <h2>How to Protect Yourself</h2>
+              <p class="slide-body">
+                You don't need to be a cybersecurity expert to defend against social engineering. You just need to slow
+                down and verify:
+              </p>
+              <ul class="slide-bullets">
+                <li><strong>Slow down.</strong> Urgency is the attacker's weapon. Take a breath before acting.</li>
+                <li><strong>Verify through a separate channel.</strong> Got a suspicious call from your bank? Hang up and call the number on the back of your card.</li>
+                <li><strong>Never click links in unexpected messages.</strong> Go directly to the website by typing it in your browser.</li>
+                <li><strong>Use Multi-Factor Authentication (MFA).</strong> Even if someone steals your password, MFA stops them from getting in.</li>
+                <li><strong>Trust your gut.</strong> If something feels off, it probably is. It's okay to say no, hang up, or not click.</li>
+                <li><strong>Report it.</strong> Tell a trusted adult, your IT department, or use the "Report Phishing" button in your email. You might protect someone else.</li>
+              </ul>
+            </div>
+          </section>
+
+          <div class="challenges-heading">Challenges</div>
+
+          <div
+            class="challenge-card challenge-multiple-choice"
+            id="card-se1"
+            data-challenge-id="se1"
+            data-answer-hash="b4278434f6f00964567fa4350ac56ae5e4e10beff4c81912bdfe32f8890ad73f"
+          >
+            <div class="challenge-label">Multiple Choice</div>
+            <h3>What is social engineering in the context of cybersecurity?</h3>
+            <ul class="options-list">
+              <li>
+                <label class="option-label">
+                  <input
+                    type="radio"
+                    name="mc-se1"
+                    value="Manipulating people psychologically to give up information or take an action"
+                  />
+                  Manipulating people psychologically to give up information or take an action
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-se1" value="Writing code that hacks into computer systems automatically" />
+                  Writing code that hacks into computer systems automatically
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-se1" value="Building better social media platforms" />
+                  Building better social media platforms
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-se1" value="Installing antivirus software to block attacks" />
+                  Installing antivirus software to block attacks
+                </label>
+              </li>
+            </ul>
+            <div class="challenge-actions">
+              <button class="btn submit-btn" style="margin-top: 1rem">Submit</button>
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>
+                  Think about what the attacker's real target is — the technology, or the human using it?
+                </div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+
+          <script type="module">
+            function z(e) {
+              const n = e.match(/(?:^|; )c2p=([^;]*)/);
+              if (!n) return {};
+              try {
+                return JSON.parse(decodeURIComponent(n[1]));
+              } catch {
+                return {};
+              }
+            }
+            function J(e) {
+              return encodeURIComponent(JSON.stringify(e));
+            }
+            function H() {
+              return z(document.cookie);
+            }
+            function O(e) {
+              const n = H();
+              n[e] = !0;
+              const s = J(n);
+              document.cookie = `c2p=${s}; path=/; max-age=${3600 * 24 * 365}; SameSite=Lax`;
+            }
+            function R(e) {
+              return H()[e] === !0;
+            }
+            const $ = "c2-cyber-day::v1::",
+              B = new Uint32Array([
+                1116352408, 1899447441, 3049323471, 3921009573, 961987163, 1508970993, 2453635748, 2870763221,
+                3624381080, 310598401, 607225278, 1426881987, 1925078388, 2162078206, 2614888103, 3248222580,
+                3835390401, 4022224774, 264347078, 604807628, 770255983, 1249150122, 1555081692, 1996064986, 2554220882,
+                2821834349, 2952996808, 3210313671, 3336571891, 3584528711, 113926993, 338241895, 666307205, 773529912,
+                1294757372, 1396182291, 1695183700, 1986661051, 2177026350, 2456956037, 2730485921, 2820302411,
+                3259730800, 3345764771, 3516065817, 3600352804, 4094571909, 275423344, 430227734, 506948616, 659060556,
+                883997877, 958139571, 1322822218, 1537002063, 1747873779, 1955562222, 2024104815, 2227730452,
+                2361852424, 2428436474, 2756734187, 3204031479, 3329325298,
+              ]);
+            function c(e, n) {
+              return ((e >>> n) | (e << (32 - n))) >>> 0;
+            }
+            function D(e) {
+              return (e >>> 0).toString(16).padStart(8, "0");
+            }
+            function K(e) {
+              const n = new TextEncoder().encode(e),
+                s = n.length,
+                i = s * 8,
+                g = (64 - ((s + 1 + 8) % 64)) % 64,
+                a = s + 1 + g + 8,
+                m = new Uint8Array(a);
+              (m.set(n, 0), (m[s] = 128));
+              const f = new DataView(m.buffer);
+              (f.setUint32(a - 8, Math.floor(i / 4294967296)), f.setUint32(a - 4, i >>> 0));
+              let o = 1779033703,
+                h = 3144134277,
+                d = 1013904242,
+                b = 2773480762,
+                v = 1359893119,
+                w = 2600822924,
+                p = 528734635,
+                C = 1541459225;
+              const r = new Uint32Array(64);
+              for (let A = 0; A < a; A += 64) {
+                for (let t = 0; t < 16; t++) r[t] = f.getUint32(A + t * 4);
+                for (let t = 16; t < 64; t++) {
+                  const U = c(r[t - 15], 7) ^ c(r[t - 15], 18) ^ (r[t - 15] >>> 3),
+                    E = c(r[t - 2], 17) ^ c(r[t - 2], 19) ^ (r[t - 2] >>> 10);
+                  r[t] = (r[t - 16] + U + r[t - 7] + E) >>> 0;
+                }
+                let l = o,
+                  S = h,
+                  y = d,
+                  q = b,
+                  u = v,
+                  k = w,
+                  x = p,
+                  L = C;
+                for (let t = 0; t < 64; t++) {
+                  const U = c(u, 6) ^ c(u, 11) ^ c(u, 25),
+                    E = (u & k) ^ (~u & x),
+                    N = (L + U + E + B[t] + r[t]) >>> 0,
+                    T = c(l, 2) ^ c(l, 13) ^ c(l, 22),
+                    I = (l & S) ^ (l & y) ^ (S & y),
+                    j = (T + I) >>> 0;
+                  ((L = x), (x = k), (k = u), (u = (q + N) >>> 0), (q = y), (y = S), (S = l), (l = (N + j) >>> 0));
+                }
+                ((o = (o + l) >>> 0),
+                  (h = (h + S) >>> 0),
+                  (d = (d + y) >>> 0),
+                  (b = (b + q) >>> 0),
+                  (v = (v + u) >>> 0),
+                  (w = (w + k) >>> 0),
+                  (p = (p + x) >>> 0),
+                  (C = (C + L) >>> 0));
+              }
+              return [o, h, d, b, v, w, p, C].map(D).join("");
+            }
+            function M(e) {
+              return e.trim().toLowerCase();
+            }
+            function P(e) {
+              return K($ + M(e));
+            }
+            function V(e) {
+              const n = e.dataset.challengeId,
+                s = e.dataset.answerHash;
+              if (!s) return;
+              const i = e.querySelector(".challenge-feedback"),
+                g = e.querySelector(".hint-toggle"),
+                a = e.querySelector(".hint-text"),
+                m = e.querySelector(".submit-btn");
+              (R(n) && e.classList.add("solved"),
+                g?.addEventListener("click", () => {
+                  a &&
+                    (a.hasAttribute("hidden")
+                      ? (a.removeAttribute("hidden"), (g.textContent = "Hide hint"))
+                      : (a.setAttribute("hidden", ""), (g.textContent = "Show hint")));
+                }));
+              function f() {
+                let o = "";
+                const h = e.querySelector('input[type="radio"]:checked');
+                if (h) o = h.value;
+                else {
+                  const d = e.querySelector(".flag-input");
+                  d && (o = d.value);
+                }
+                if (!o.trim()) {
+                  ((i.textContent = "Please enter an answer."), (i.className = "challenge-feedback incorrect"));
+                  return;
+                }
+                P(o) === s
+                  ? ((i.textContent = "✓ Correct!"),
+                    (i.className = "challenge-feedback correct"),
+                    O(n),
+                    e.classList.add("solved"))
+                  : ((i.textContent = "✗ Not quite. Try again."), (i.className = "challenge-feedback incorrect"));
+              }
+              (m.addEventListener("click", f),
+                e.querySelector(".flag-input")?.addEventListener("keydown", (o) => {
+                  o.key === "Enter" && f();
+                }));
+            }
+            document.querySelectorAll(".challenge-card[data-answer-hash]").forEach(V);
+          </script>
+
+          <div
+            class="challenge-card challenge-multiple-choice"
+            id="card-se2"
+            data-challenge-id="se2"
+            data-answer-hash="f3310e890264f74dde89e97bce845133e1dcc10c9ec6d03199a7f8f6733e8c01"
+          >
+            <div class="challenge-label">Multiple Choice</div>
+            <h3>Why do phishing emails almost always include a tight deadline or a scary warning?</h3>
+            <ul class="options-list">
+              <li>
+                <label class="option-label">
+                  <input
+                    type="radio"
+                    name="mc-se2"
+                    value="It creates urgency or fear so you act before you think"
+                  />
+                  It creates urgency or fear so you act before you think
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-se2" value="It is required by email security standards" />
+                  It is required by email security standards
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-se2" value="It makes the email look more professional" />
+                  It makes the email look more professional
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-se2" value="Deadlines help the attacker track their schedule" />
+                  Deadlines help the attacker track their schedule
+                </label>
+              </li>
+            </ul>
+            <div class="challenge-actions">
+              <button class="btn submit-btn" style="margin-top: 1rem">Submit</button>
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>
+                  The slide said urgency is the attacker's weapon — it short-circuits careful thinking.
+                </div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+
+          <div
+            class="challenge-card challenge-multiple-choice"
+            id="card-se3"
+            data-challenge-id="se3"
+            data-answer-hash="1a50758005c9591e9c94fffa3b0d37c9b6399748366bf23d12e243424130dea9"
+          >
+            <div class="challenge-label">Multiple Choice</div>
+            <h3>
+              You get a text saying your Apple ID has been locked and you need to verify it immediately via a link.
+              What is the safest response?
+            </h3>
+            <ul class="options-list">
+              <li>
+                <label class="option-label">
+                  <input
+                    type="radio"
+                    name="mc-se3"
+                    value="Don't click anything — verify by contacting the company directly through their official website or phone number"
+                  />
+                  Don't click anything — verify by contacting the company directly through their official website or
+                  phone number
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-se3" value="Click the link quickly before your account is actually locked" />
+                  Click the link quickly before your account is actually locked
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-se3" value="Reply to the text asking for more information" />
+                  Reply to the text asking for more information
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-se3" value="Forward the text to a friend to see what they think" />
+                  Forward the text to a friend to see what they think
+                </label>
+              </li>
+            </ul>
+            <div class="challenge-actions">
+              <button class="btn submit-btn" style="margin-top: 1rem">Submit</button>
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>
+                  Never use links or phone numbers in the suspicious message itself — always go to the source directly.
+                </div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+
+          <div
+            class="challenge-card challenge-multiple-choice"
+            id="card-se4"
+            data-challenge-id="se4"
+            data-answer-hash="b2aee66a224fd30e6df7ac27b8ff98de2b86491a5d53f3090bb9e0b94583972c"
+          >
+            <div class="challenge-label">Multiple Choice</div>
+            <h3>What is "vishing"?</h3>
+            <ul class="options-list">
+              <li>
+                <label class="option-label">
+                  <input
+                    type="radio"
+                    name="mc-se4"
+                    value="A phone call where the attacker pretends to be someone trustworthy to trick you"
+                  />
+                  A phone call where the attacker pretends to be someone trustworthy to trick you
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-se4" value="A phishing attack sent through a video game chat" />
+                  A phishing attack sent through a video game chat
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-se4" value="A phishing attack delivered by text message" />
+                  A phishing attack delivered by text message
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-se4" value="A virus disguised as a music streaming app" />
+                  A virus disguised as a music streaming app
+                </label>
+              </li>
+            </ul>
+            <div class="challenge-actions">
+              <button class="btn submit-btn" style="margin-top: 1rem">Submit</button>
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>
+                  The "v" in vishing stands for voice. Think of the classic "Microsoft Support" scam call.
+                </div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+
+          <div
+            class="challenge-card challenge-multiple-choice"
+            id="card-se5"
+            data-challenge-id="se5"
+            data-answer-hash="9ae64bff48ed33c58635d2005558034b2105dd612eb224450787834906615636"
+          >
+            <div class="challenge-label">Multiple Choice</div>
+            <h3>
+              An attacker looks up your name, your school, your teachers, and your friends on social media before
+              sending you a very convincing personalized email. What type of attack is this?
+            </h3>
+            <ul class="options-list">
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-se5" value="Spear phishing" />
+                  Spear phishing
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-se5" value="Generic phishing" />
+                  Generic phishing
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-se5" value="Smishing" />
+                  Smishing
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-se5" value="Baiting" />
+                  Baiting
+                </label>
+              </li>
+            </ul>
+            <div class="challenge-actions">
+              <button class="btn submit-btn" style="margin-top: 1rem">Submit</button>
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>
+                  When an attack is researched and targeted at one specific person, the "spear" in the name hints at
+                  precision rather than casting a wide net.
+                </div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+
+          <div
+            class="challenge-card challenge-multiple-choice"
+            id="card-se6"
+            data-challenge-id="se6"
+            data-answer-hash="55ffbf4eb70ddc5f167a6a92fcc29b1455aa0f6e5a2732ef7d68361f6c9898f0"
+          >
+            <div class="challenge-label">Multiple Choice</div>
+            <h3>Which of the following are red flags that a message might be a phishing attempt?</h3>
+            <ul class="options-list">
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-se6" value="The sender's address doesn't match the company it claims to be from" />
+                  The sender's address doesn't match the company it claims to be from
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-se6" value="The message creates extreme urgency and threatens consequences" />
+                  The message creates extreme urgency and threatens consequences
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-se6" value="The message asks you to click a link and enter your password" />
+                  The message asks you to click a link and enter your password
+                </label>
+              </li>
+              <li>
+                <label class="option-label">
+                  <input type="radio" name="mc-se6" value="All of the above" />
+                  All of the above
+                </label>
+              </li>
+            </ul>
+            <div class="challenge-actions">
+              <button class="btn submit-btn" style="margin-top: 1rem">Submit</button>
+              <div class="challenge-feedback" role="status" aria-live="polite"></div>
+              <div>
+                <button class="hint-toggle">Show hint</button>
+                <div class="hint-text" hidden>
+                  Real phishing attempts usually combine multiple red flags at once — attackers layer their tricks.
+                </div>
+              </div>
+              <div class="solved-badge">✓ Solved!</div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="resources-section">
+          <h2>For More Information</h2>
+          <div class="resources-grid">
+            <div class="resource-card">
+              <h3>Google Phishing Quiz</h3>
+              <p>
+                An interactive quiz built with Jigsaw (Google) that shows you real-looking phishing emails and teaches
+                you to spot the red flags. Great hands-on practice.
+              </p>
+              <a href="https://phishingquiz.withgoogle.com/" target="_blank" rel="noopener noreferrer">Visit →</a>
+            </div>
+            <div class="resource-card">
+              <h3>CISA: Phishing Guidance</h3>
+              <p>
+                The Cybersecurity and Infrastructure Security Agency's plain-language guide to recognizing and avoiding
+                phishing attacks.
+              </p>
+              <a href="https://www.cisa.gov/topics/cyber-threats-and-advisories/phishing" target="_blank" rel="noopener noreferrer">Visit →</a>
+            </div>
+            <div class="resource-card">
+              <h3>Social Engineering: The Art of Human Hacking</h3>
+              <p>
+                An overview from the Social Engineer organization on the psychology and techniques behind social
+                engineering attacks.
+              </p>
+              <a href="https://www.social-engineer.org/framework/general-discussion/" target="_blank" rel="noopener noreferrer">Visit →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+    <script type="module" src="/LOTF/workshop/presentation.js"></script>
+  </body>
+</html>

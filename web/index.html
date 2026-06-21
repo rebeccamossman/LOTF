@@ -11,10 +11,12 @@
   <body>
     <nav class="site-nav">
       <a href="/LOTF/" class="nav-logo">Leaders of the Future <span>Cybersecurity Workshop</span></a>
-      <div class="nav-links">
-        <a href="/LOTF/ethical-hacking/">Ethical Hacking</a><a href="/LOTF/crypto/">Crypto</a
-        ><a href="/LOTF/web/" aria-current="page">Web</a><a href="/LOTF/ai/">AI</a><a href="/LOTF/locks/">Lockpicking</a
-        ><a href="/LOTF/osint/">OSINT</a>
+            <div class="nav-links">
+        <a href="/LOTF/ethical-hacking/">Ethical Hacking</a>
+        <a href="/LOTF/crypto/">Crypto</a>
+        <a href="/LOTF/web/" aria-current="page">Web</a>
+        <a href="/LOTF/ai/">AI</a>
+        <a href="/LOTF/osint/">OSINT</a>
         <a href="/LOTF/about/">About</a>
       </div>
     </nav>
@@ -455,141 +457,7 @@
               <div class="solved-badge">✓ Solved!</div>
             </div>
           </div>
-          <div
-            class="challenge-card challenge-flag-input"
-            id="card-web2"
-            data-challenge-id="web2"
-            data-answer-hash="b250e11231d2685d979b36cfaf55d80147b1f0a2bcbb0819bf166e5b597d01ad"
-          >
-            <div class="challenge-label">Flag Challenge</div>
-            <h3>
-              Web servers often host files that are not linked anywhere on the site but are still publicly accessible.
-              This well-known file tells search engine crawlers where they can and cannot go. Find it on this site and
-              submit the flag hidden inside.
-            </h3>
-            <div class="flag-input-wrapper">
-              <input
-                type="text"
-                class="flag-input mono"
-                placeholder="Enter flag..."
-                autocomplete="off"
-                spellcheck="false"
-                aria-label="Flag input"
-              />
-              <button class="btn submit-btn">Submit</button>
-            </div>
-            <div class="challenge-actions">
-              <div class="challenge-feedback" role="status" aria-live="polite"></div>
-              <div>
-                <button class="hint-toggle">Show hint</button>
-                <div class="hint-text" hidden>
-                  Try researching well-known files — it is a standard file at the root of most websites.
-                </div>
-              </div>
-              <div class="solved-badge">✓ Solved!</div>
-            </div>
-          </div>
-          <div
-            class="challenge-card challenge-flag-input"
-            id="card-web3"
-            data-challenge-id="web3"
-            data-answer-hash="919868e2c6c9f01cde846d355532afcbd641a8abfc351fce54fd88342b75d7d5"
-          >
-            <div class="challenge-label">Flag Challenge</div>
-            <h3>
-              Most web pages send code to your browser to run, and you can inspect everything it does. This page runs
-              some JavaScript that leaves a message behind the scenes. What secret does the JS have for you?
-            </h3>
-            <div class="flag-input-wrapper">
-              <input
-                type="text"
-                class="flag-input mono"
-                placeholder="Enter flag..."
-                autocomplete="off"
-                spellcheck="false"
-                aria-label="Flag input"
-              />
-              <button class="btn submit-btn">Submit</button>
-            </div>
-            <div class="challenge-actions">
-              <div class="challenge-feedback" role="status" aria-live="polite"></div>
-              <div>
-                <button class="hint-toggle">Show hint</button>
-                <div class="hint-text" hidden>Press F12 (or right-click → Inspect) and explore the tools.</div>
-              </div>
-              <div class="solved-badge">✓ Solved!</div>
-            </div>
-          </div>
-          <div
-            class="challenge-card challenge-flag-input"
-            id="card-web4"
-            data-challenge-id="web4"
-            data-answer-hash="b17d08b557b0263bb6595ffde7ac2a8da4bfd49d8f7914c685441d6bb2c54256"
-          >
-            <div class="challenge-label">Flag Challenge</div>
-            <h3>
-              The JavaScript that is responsible for the last flag has some extra fun. Read the source and recover the
-              password that unlocks the flag. What PASSWORD (not flag) should be used to expose the flag?
-            </h3>
-            <div class="flag-input-wrapper">
-              <input
-                type="text"
-                class="flag-input mono"
-                placeholder="Enter flag..."
-                autocomplete="off"
-                spellcheck="false"
-                aria-label="Flag input"
-              />
-              <button class="btn submit-btn">Submit</button>
-            </div>
-            <div class="challenge-actions">
-              <div class="challenge-feedback" role="status" aria-live="polite"></div>
-              <div>
-                <button class="hint-toggle">Show hint</button>
-                <div class="hint-text" hidden>
-                  checkPassword() compares each character&#39;s code against a fixed list. Convert those character codes
-                  back to text to get the password (then you can call getFlag(&quot;...&quot;) in the console to see the
-                  flag it unlocks).
-                </div>
-              </div>
-              <div class="solved-badge">✓ Solved!</div>
-            </div>
-          </div>
-          <div
-            class="challenge-card challenge-flag-input"
-            id="card-web5"
-            data-challenge-id="web5"
-            data-answer-hash="8b4b1fe0146e2f578a3bbdcba2e0a32647712d0ccf1b333e451d1209343cbbc6"
-          >
-            <div class="challenge-label">Flag Challenge</div>
-            <h3>
-              This page loads a user profile from a JSON API. There is a special user that may have something special
-              for you... Go get the secret flag from that user profile!
-            </h3>
-            <div class="flag-input-wrapper">
-              <input
-                type="text"
-                class="flag-input mono"
-                placeholder="Enter flag..."
-                autocomplete="off"
-                spellcheck="false"
-                aria-label="Flag input"
-              />
-              <button class="btn submit-btn">Submit</button>
-            </div>
-            <div class="challenge-actions">
-              <div class="challenge-feedback" role="status" aria-live="polite"></div>
-              <div>
-                <button class="hint-toggle">Show hint</button>
-                <div class="hint-text" hidden>
-                  In the challenge JS file, there is some logic to start personalizing the page. But, it seems to be a
-                  bit flawed with a common vulnerability called IDOR (Insecure Direct Object Reference).
-                </div>
-              </div>
-              <div class="solved-badge">✓ Solved!</div>
-            </div>
-          </div>
-        </div>
+                                                </div>
         <div class="resources-section">
           <h2>For More Information</h2>
           <div class="resources-grid">

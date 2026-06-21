@@ -11,9 +11,13 @@
   <body>
     <nav class="site-nav">
       <a href="/LOTF/" class="nav-logo">Leaders of the Future <span>Cybersecurity Workshop</span></a>
-      <div class="nav-links">
-        <a href="/LOTF/ethical-hacking/">Ethical Hacking</a><a href="/LOTF/crypto/">Crypto</a
-        ><a href="/LOTF/web/">Web</a><a href="/LOTF/ai/">AI</a><a href="/LOTF/osint/" aria-current="page">OSINT</a>
+            <div class="nav-links">
+        <a href="/LOTF/ethical-hacking/">Ethical Hacking</a>
+        <a href="/LOTF/crypto/">Crypto</a>
+        <a href="/LOTF/web/">Web</a>
+        <a href="/LOTF/ai/">AI</a>
+        <a href="/LOTF/osint/" aria-current="page">OSINT</a>
+        <a href="/LOTF/about/">About</a>
       </div>
     </nav>
     <main>
@@ -452,41 +456,7 @@
             }
             document.querySelectorAll(".challenge-card[data-answer-hash]").forEach(V);
           </script>
-          <div
-            class="challenge-card challenge-flag-input"
-            id="card-osint2"
-            data-challenge-id="osint2"
-            data-answer-hash="31f1abba2533bb84eba65c2da8b6fbad869037bf250b633fc2292e7bc6c62c4c"
-          >
-            <div class="challenge-label">Flag Challenge</div>
-            <h3>
-              We are looking for a hash used as a subdomain on a domain related to &#39;the-petting-zoo.com&#39;. What
-              is the subdomain?
-            </h3>
-            <div class="flag-input-wrapper">
-              <input
-                type="text"
-                class="flag-input mono"
-                placeholder="Enter flag..."
-                autocomplete="off"
-                spellcheck="false"
-                aria-label="Flag input"
-              />
-              <button class="btn submit-btn">Submit</button>
-            </div>
-            <div class="challenge-actions">
-              <div class="challenge-feedback" role="status" aria-live="polite"></div>
-              <div>
-                <button class="hint-toggle">Show hint</button>
-                <div class="hint-text" hidden>
-                  SSL certificate transparency logs are publicly searchable. Try crt.sh — search for the domain and look
-                  for any subdomain entries that look like a hash.
-                </div>
-              </div>
-              <div class="solved-badge">✓ Solved!</div>
-            </div>
-          </div>
-          <div
+                    <div
             class="challenge-card challenge-multiple-choice"
             id="card-osint3"
             data-challenge-id="osint3"
@@ -523,42 +493,7 @@
               <div class="solved-badge">✓ Solved!</div>
             </div>
           </div>
-          <div
-            class="challenge-card challenge-flag-input"
-            id="card-osint4"
-            data-challenge-id="osint4"
-            data-answer-hash="e67305f9ad01a5a5eaf15f6eb2ca6830bb9e5ce1033bf2463c476cc60cd64ef7"
-          >
-            <div class="challenge-label">Flag Challenge</div>
-            <h3>
-              Grace accidentally pushed something sensitive to one of her projects. What is the key used in her
-              encryption project?
-            </h3>
-            <div class="flag-input-wrapper">
-              <input
-                type="text"
-                class="flag-input mono"
-                placeholder="Enter flag..."
-                autocomplete="off"
-                spellcheck="false"
-                aria-label="Flag input"
-              />
-              <button class="btn submit-btn">Submit</button>
-            </div>
-            <div class="challenge-actions">
-              <div class="challenge-feedback" role="status" aria-live="polite"></div>
-              <div>
-                <button class="hint-toggle">Show hint</button>
-                <div class="hint-text" hidden>
-                  Find Grace&#39;s GitHub profile and look through her repositories for anything encryption-related.
-                  Check the source code and commit history — secrets are often accidentally committed and visible even
-                  after deletion.
-                </div>
-              </div>
-              <div class="solved-badge">✓ Solved!</div>
-            </div>
-          </div>
-          <div
+                    <div
             class="challenge-card challenge-multiple-choice"
             id="card-osint5"
             data-challenge-id="osint5"
@@ -705,73 +640,7 @@
               <div class="solved-badge">✓ Solved!</div>
             </div>
           </div>
-          <div
-            class="challenge-card challenge-flag-input"
-            id="card-osint8"
-            data-challenge-id="osint8"
-            data-answer-hash="f51da18dae8c8565cfe1fd7ddcecbd0789783d0661d451daa7e13e18d39a21ad"
-          >
-            <div class="challenge-label">Flag Challenge</div>
-            <h3>
-              We are tracking an access point around the valley. We think we have the BSSID but dont want to know the
-              SSID so we can keep an eye out for it. What is the SSID? BSSID: 00:24:C8:70:47:40 -- FLAG Format: SSID
-            </h3>
-            <div class="flag-input-wrapper">
-              <input
-                type="text"
-                class="flag-input mono"
-                placeholder="Enter flag..."
-                autocomplete="off"
-                spellcheck="false"
-                aria-label="Flag input"
-              />
-              <button class="btn submit-btn">Submit</button>
-            </div>
-            <div class="challenge-actions">
-              <div class="challenge-feedback" role="status" aria-live="polite"></div>
-              <div>
-                <button class="hint-toggle">Show hint</button>
-                <div class="hint-text" hidden>
-                  A BSSID is the unique MAC address of a Wi-Fi access point. Wardriving databases like WiGLE (wigle.net)
-                  let you search a BSSID to find the SSID (network name) it broadcasts and where it has been spotted.
-                </div>
-              </div>
-              <div class="solved-badge">✓ Solved!</div>
-            </div>
-          </div>
-          <div
-            class="challenge-card challenge-flag-input"
-            id="card-osint9"
-            data-challenge-id="osint9"
-            data-answer-hash="86381fe567f429da2f5378bc7bddb43638cee024622c3299e4dd378986dbe1dc"
-          >
-            <div class="challenge-label">Flag Challenge</div>
-            <h3>All we know is that the secret was published before.theunknown.space.</h3>
-            <div class="flag-input-wrapper">
-              <input
-                type="text"
-                class="flag-input mono"
-                placeholder="Enter flag..."
-                autocomplete="off"
-                spellcheck="false"
-                aria-label="Flag input"
-              />
-              <button class="btn submit-btn">Submit</button>
-            </div>
-            <div class="challenge-actions">
-              <div class="challenge-feedback" role="status" aria-live="polite"></div>
-              <div>
-                <button class="hint-toggle">Show hint</button>
-                <div class="hint-text" hidden>
-                  Heard of the Wayback Machine? It archives snapshots of websites over time. If the secret was published
-                  on a website before.theunknown.space, you can use the Wayback Machine to look at historical versions
-                  of that site and find the secret.
-                </div>
-              </div>
-              <div class="solved-badge">✓ Solved!</div>
-            </div>
-          </div>
-        </div>
+                            </div>
         <div class="resources-section">
           <h2>For More Information</h2>
           <div class="resources-grid">

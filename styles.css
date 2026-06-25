@@ -566,6 +566,220 @@ main { flex: 1; }
   .about-section, .resources-section { padding: 3rem 1.25rem; }
 }
 
+/* ── Career slide tiles ── */
+.stat-tiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.stat-tile {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+  transition: border-color .2s, transform .2s;
+}
+
+.stat-tile:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.stat-tile .stat-number {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--accent);
+  letter-spacing: -.04em;
+  line-height: 1;
+  text-shadow: 0 0 24px #00e5ff33;
+}
+
+.stat-tile .stat-label {
+  font-size: .85rem;
+  color: var(--text-muted);
+  margin-top: .4rem;
+  line-height: 1.4;
+}
+
+.stat-tile .stat-source {
+  font-size: .72rem;
+  color: var(--text-muted);
+  opacity: .6;
+  margin-top: .25rem;
+}
+
+.benefit-tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: .75rem;
+  margin-top: 1rem;
+}
+
+.benefit-tile {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: .75rem 1rem;
+  font-size: .9rem;
+  font-weight: 600;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+}
+
+.benefit-tile .tile-icon {
+  color: var(--accent);
+  font-style: normal;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.info-tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.info-tile {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  transition: border-color .2s, transform .2s;
+}
+
+.info-tile:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.info-tile .tile-heading {
+  font-size: .8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--accent);
+  margin-bottom: .5rem;
+}
+
+.info-tile p {
+  font-size: .9rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.info-tile .tile-meta {
+  font-size: .78rem;
+  color: var(--text-muted);
+  opacity: .7;
+  margin-top: .5rem;
+}
+
+.path-tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.path-tile {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  transition: border-color .2s, box-shadow .2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.path-tile::before {
+  content: attr(data-num);
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--accent);
+  opacity: .1;
+  line-height: 1;
+  letter-spacing: -.04em;
+}
+
+.path-tile:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 20px #00e5ff0d;
+}
+
+.path-tile .tile-heading {
+  font-size: .8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--accent);
+  margin-bottom: .4rem;
+}
+
+.path-tile p {
+  font-size: .88rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0 0 .5rem;
+}
+
+.path-tile .tile-meta {
+  font-size: .75rem;
+  color: var(--text-muted);
+  opacity: .7;
+  line-height: 1.4;
+}
+
+.takeaway-tiles {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: .75rem;
+  margin-top: 1.25rem;
+}
+
+.takeaway-tile {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: .9rem 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: border-color .2s;
+}
+
+.takeaway-tile:hover { border-color: var(--accent); }
+
+.takeaway-tile .takeaway-num {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--accent);
+  min-width: 1.75rem;
+  text-align: center;
+  opacity: .8;
+}
+
+.takeaway-tile p {
+  font-size: .95rem;
+  color: var(--text);
+  line-height: 1.45;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .stat-tiles { grid-template-columns: 1fr; }
+  .path-tiles { grid-template-columns: 1fr; }
+}
+
 /* ── AI Assistant ── */
 .ai-assistant-mount { max-width: 780px; margin: 2rem auto; }
 .ai-chat { border: 1px solid var(--accent-dim); border-radius: var(--radius-lg); padding: 2rem; background: #00e5ff06; }

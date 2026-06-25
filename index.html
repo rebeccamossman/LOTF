@@ -30,6 +30,92 @@
           building the fundamentals and the hacker mindset. Hosted by Clark County Cybersecurity in collaboration with C2Society and DC702.
         </p>
       </div>
+      <div class="section-page" id="section-container">
+        <div class="section-header">
+          <h1>Cybersecurity Careers<span>.</span></h1>
+          <div style="display: contents">
+            <button id="presentation-toggle" class="btn-present">⛶ Present</button>
+          </div>
+          <div class="presentation-controls" id="presentation-controls" hidden>
+            <button class="nav-arrow" id="prev-slide" aria-label="Previous slide">←</button>
+            <span class="slide-counter" id="slide-counter">1 / 1</span>
+            <button class="nav-arrow" id="next-slide" aria-label="Next slide">→</button>
+            <button class="btn-exit" id="exit-presentation">Exit</button>
+          </div>
+        </div>
+
+        <div id="slides-container">
+
+          <section class="slide" id="careers-why" data-slide>
+            <div class="slide-content">
+              <h2>Why Cybersecurity?</h2>
+              <p class="slide-body">Cybersecurity is one of the fastest-growing, highest-paying, and most future-proof fields you can enter — and it genuinely matters. The work protects hospitals, schools, governments, and millions of people every day.</p>
+              <ul class="slide-bullets">
+                <li><strong>33% job growth</strong> projected 2023–2033 — far above the national average. (Bureau of Labor Statistics)</li>
+                <li><strong>Jobs outnumber qualified candidates</strong> — demand consistently outpaces supply across every specialization.</li>
+                <li><strong>$128K average salary</strong> for security engineers. (Glassdoor, 2025)</li>
+                <li><strong>Diverse opportunities</strong> — from offensive hacking to policy, forensics, engineering, and leadership.</li>
+                <li><strong>Dynamic work</strong> — the threat landscape changes constantly, so no two days are the same.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="slide" id="careers-start" data-slide>
+            <div class="slide-content">
+              <h2>How Most People Start</h2>
+              <p class="slide-body">Most cybersecurity professionals don't start in security — they build a foundation in general IT first, then specialize. There is no single right path.</p>
+              <ul class="slide-bullets">
+                <li><strong>General IT first</strong> — Help Desk Technician, Network Administrator, Systems Administrator, or Software Developer. These roles build the foundational knowledge security work depends on.</li>
+                <li><strong>Entry-level security roles</strong> — Cybersecurity Analyst and Information Security Analyst are common first steps into the field.</li>
+                <li><strong>Education</strong> — 56% of professionals hold a bachelor's degree; 23% hold an associate degree.</li>
+                <li><strong>Self-taught paths are valid</strong> — Certifications, bootcamps, and online programs (TryHackMe, Hack The Box) accelerate the path. Hands-on practice often matters more than credentials alone.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="slide" id="careers-paths" data-slide>
+            <div class="slide-content">
+              <h2>The 5 Cybersecurity Career Paths</h2>
+              <p class="slide-body">Cybersecurity isn't one job — it's a family of disciplines. Find the area that fits your strengths and interests:</p>
+              <ul class="slide-bullets">
+                <li><strong>Engineering &amp; Architecture</strong> — Build and implement defense systems. Leads to Security Architect roles. Certs: Security+, SSCP, CISSP. Avg: $128K–$164K.</li>
+                <li><strong>Incident Response &amp; Forensics</strong> — Monitor networks, contain breaches, investigate attacks. Certs: GCIH, ECIH, CCE. Avg: $97K–$132K.</li>
+                <li><strong>Management &amp; GRC</strong> — Oversee teams, risk, and compliance. Top role: CISO (Chief Information Security Officer). Certs: CISM, GCPM, CISSP.</li>
+                <li><strong>Consulting &amp; Penetration Testing</strong> — Test systems for multiple clients, offense and defense combined. Certs: Security+, OSCP, CSC. Avg: ~$119K; senior roles $180K–$198K.</li>
+                <li><strong>Governance, Risk &amp; Compliance (GRC)</strong> — Ensure organizations meet legal and regulatory security requirements. Great path for detail-oriented and policy-minded people.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="slide" id="careers-get-started" data-slide>
+            <div class="slide-content">
+              <h2>How to Get Started</h2>
+              <p class="slide-body">You can start building real cybersecurity skills today — most of the best resources are free. Always get a parent or guardian's permission before signing up for any online platform.</p>
+              <ul class="slide-bullets">
+                <li><strong>Learn by doing</strong> — Hack The Box, TryHackMe, pwn.college, and OverTheWire offer free guided labs and challenges that teach real skills hands-on.</li>
+                <li><strong>Get certified</strong> — CompTIA Security+ is the most recognized entry-level cert. CEH and OSCP are intermediate. CISSP is advanced.</li>
+                <li><strong>Join the community</strong> — DC702 is Las Vegas's own DEF CON group. C2Society hosts local workshops. DEF CON itself is held here every year.</li>
+                <li><strong>Compete in CTFs</strong> — Capture the Flag competitions are puzzle-based hacking contests. They're a great way to learn, meet people, and build a portfolio.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="slide" id="careers-takeaways" data-slide>
+            <div class="slide-content">
+              <h2>Key Takeaways</h2>
+              <ul class="slide-bullets">
+                <li>Cybersecurity has diverse paths — find the one that fits your personality and strengths.</li>
+                <li>33% job growth through 2033. Demand consistently outpaces the supply of qualified candidates.</li>
+                <li>Ethical hacking requires explicit authorization — always. The law applies to everyone.</li>
+                <li>Your digital footprint is much larger than you think — protecting yourself starts with awareness.</li>
+                <li>Las Vegas has a world-class security community. DC702, C2Society, and DEF CON are right here.</li>
+              </ul>
+            </div>
+          </section>
+
+        </div>
+      </div>
+
       <div class="tiles-grid">
         <a href="/LOTF/ethical-hacking/" class="section-tile">
           <div class="challenge-label">Lesson</div>
@@ -63,5 +149,6 @@
         </a>
       </div>
     </main>
+    <script type="module" src="/LOTF/workshop/presentation.js"></script>
   </body>
 </html>

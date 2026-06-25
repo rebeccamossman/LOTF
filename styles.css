@@ -566,6 +566,25 @@ main { flex: 1; }
   .about-section, .resources-section { padding: 3rem 1.25rem; }
 }
 
+/* ── Social engineering two-column slide ── */
+.se-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.se-col-label {
+  font-size: .72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--accent);
+  margin-bottom: .6rem;
+}
+@media (max-width: 700px) {
+  .se-two-col { grid-template-columns: 1fr; }
+}
+
 /* ── Career slides — PPTX-matched design ── */
 
 /* Slide background variants */
@@ -850,8 +869,8 @@ main { flex: 1; }
 }
 
 .stat-tile:hover {
-  border-color: var(--accent);
-  transform: translateY(-2px);
+  border-color: var(--border);
+  transform: none;
 }
 
 .stat-tile .stat-number {
@@ -920,8 +939,8 @@ main { flex: 1; }
 }
 
 .info-tile:hover {
-  border-color: var(--accent);
-  transform: translateY(-2px);
+  border-color: var(--border);
+  transform: none;
 }
 
 .info-tile .tile-heading {
@@ -978,8 +997,8 @@ main { flex: 1; }
 }
 
 .path-tile:hover {
-  border-color: var(--accent);
-  box-shadow: 0 4px 20px #00e5ff0d;
+  border-color: var(--border);
+  box-shadow: none;
 }
 
 .path-tile .tile-heading {
@@ -1023,7 +1042,7 @@ main { flex: 1; }
   transition: border-color .2s;
 }
 
-.takeaway-tile:hover { border-color: var(--accent); }
+.takeaway-tile:hover { border-color: var(--border); }
 
 .takeaway-tile .takeaway-num {
   font-size: 1.25rem;

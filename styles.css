@@ -566,6 +566,272 @@ main { flex: 1; }
   .about-section, .resources-section { padding: 3rem 1.25rem; }
 }
 
+/* ── Career slides — PPTX-matched design ── */
+
+/* Slide background variants */
+.slide--pptx-dark {
+  background: #0d1b2a;
+  border-bottom: none;
+  padding: 3rem 2.5rem;
+}
+.slide--pptx-light {
+  background: #e8eff7;
+  border-bottom: none;
+  padding: 3rem 2.5rem;
+}
+.slide--pptx-dark h2 { color: #ffffff; }
+.slide--pptx-light h2 { color: #0d1b2a; }
+
+/* Section eyebrow label */
+.pptx-eyebrow {
+  font-size: .72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: #00c2cb;
+  margin-bottom: .6rem;
+}
+
+/* Stat cards — 3-up row */
+.pptx-stat-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.pptx-stat-card {
+  background: #1b2a4a;
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 1.25rem 1rem;
+}
+.pptx-stat-card .ps-number {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #00c2cb;
+  letter-spacing: -.04em;
+  line-height: 1;
+}
+.pptx-stat-card .ps-label {
+  font-size: .95rem;
+  color: #ffffff;
+  margin-top: .5rem;
+  line-height: 1.4;
+}
+.pptx-stat-card .ps-source {
+  font-size: .72rem;
+  color: #7a8fa6;
+  margin-top: .4rem;
+}
+
+/* Benefit text row below stats */
+.pptx-benefit-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .5rem;
+  margin-top: 1rem;
+}
+.pptx-benefit-row span {
+  color: #f0f4f8;
+  font-size: .88rem;
+  line-height: 1.4;
+}
+
+/* Two-panel layout for slide 3 */
+.pptx-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+.pptx-panel {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+}
+.pptx-panel h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0d1b2a;
+  margin-bottom: .25rem;
+}
+.pptx-panel .pp-sub {
+  font-size: .78rem;
+  color: #7a8fa6;
+  margin-bottom: .75rem;
+}
+.pptx-panel ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.pptx-panel ul li {
+  font-size: .9rem;
+  color: #0d1b2a;
+  padding: .2rem 0;
+  line-height: 1.4;
+}
+.pptx-entry-pill {
+  display: inline-block;
+  background: #00c2cb;
+  color: #0d1b2a;
+  font-size: .78rem;
+  font-weight: 700;
+  padding: .25rem .75rem;
+  border-radius: 4px;
+  margin: .6rem 0 .4rem;
+}
+.pptx-stat-row-sm {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  margin-bottom: .75rem;
+}
+.pptx-stat-row-sm .psr-item {
+  background: #f0f4f8;
+  border-radius: var(--radius);
+  padding: .5rem .75rem;
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+.pptx-stat-row-sm .psr-num {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #00c2cb;
+  min-width: 2.5rem;
+}
+.pptx-stat-row-sm .psr-label {
+  font-size: .88rem;
+  color: #0d1b2a;
+}
+.pptx-self-taught {
+  background: #e8f7f0;
+  border-radius: var(--radius);
+  padding: .75rem 1rem;
+}
+.pptx-self-taught strong {
+  display: block;
+  font-size: .88rem;
+  color: #1b6b45;
+  margin-bottom: .25rem;
+}
+.pptx-self-taught p {
+  font-size: .82rem;
+  color: #1b6b45;
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* Career path cards */
+.pptx-path-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: .875rem;
+  margin-top: 1.25rem;
+}
+.pptx-path-card {
+  background: #1b2a4a;
+  border-radius: var(--radius-lg);
+  padding: 1.1rem 1rem;
+}
+.pptx-path-card .pc-num {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-bottom: .5rem;
+}
+.pptx-path-card .pc-title {
+  font-size: .95rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: .5rem;
+  line-height: 1.3;
+}
+.pptx-path-card .pc-detail {
+  font-size: .78rem;
+  line-height: 1.5;
+}
+.pptx-path-card .pc-salary {
+  font-size: .75rem;
+  font-weight: 700;
+  margin-top: .5rem;
+}
+
+/* Get started — 3 columns */
+.pptx-col-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+.pptx-col-card {
+  background: #1b2a4a;
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.1rem;
+}
+.pptx-col-card .cc-heading {
+  font-size: .95rem;
+  font-weight: 700;
+  margin-bottom: .75rem;
+}
+.pptx-col-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.pptx-col-card ul li {
+  font-size: .88rem;
+  color: #ffffff;
+  padding: .2rem 0;
+  line-height: 1.4;
+}
+.pptx-warning {
+  background: #1b2a4a;
+  border-left: 3px solid #ffc000;
+  border-radius: var(--radius);
+  padding: .75rem 1rem;
+  margin-top: 1rem;
+  font-size: .85rem;
+  color: #ffc000;
+  line-height: 1.5;
+}
+
+/* Takeaway rows */
+.pptx-takeaway-list {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  margin-top: 1.25rem;
+}
+.pptx-takeaway-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.pptx-takeaway-row .ptr-num {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: #00c2cb;
+  color: #0d1b2a;
+  font-size: .85rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.pptx-takeaway-row .ptr-text {
+  font-size: .95rem;
+  color: #ffffff;
+  line-height: 1.45;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .pptx-stat-row, .pptx-benefit-row, .pptx-two-col,
+  .pptx-path-grid, .pptx-col-grid { grid-template-columns: 1fr; }
+}
+
 /* ── Career slide tiles ── */
 .stat-tiles {
   display: grid;

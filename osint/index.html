@@ -132,60 +132,6 @@
           </section>
           <section class="slide" id="osint-ai-data" data-slide>
             <div class="slide-content">
-              <h2>Your Data as Training Data</h2>
-              <p class="slide-body">
-                Every post, photo, check-in, and search you make is publicly accessible — and at scale, that data is
-                scraped and used to train AI models. Individually, each data point seems harmless. Combined, they build
-                a profile more detailed than most people realize.
-              </p>
-              <ul class="slide-bullets">
-                <li>Social media posts reveal your opinions, relationships, and daily routine</li>
-                <li>Photos contain metadata (time, location) and can be used for facial recognition training</li>
-                <li>Writing style and word choice can identify you across anonymous accounts</li>
-                <li>
-                  Behavioral patterns — when you are online, what you engage with — are as revealing as what you post
-                </li>
-              </ul>
-            </div>
-          </section>
-          <section class="slide" id="osint-ai-tools" data-slide>
-            <div class="slide-content">
-              <h2>AI-Powered OSINT</h2>
-              <p class="slide-body">
-                AI doesn&#39;t replace OSINT — it supercharges it. Tasks that once took hours of manual research can now
-                be automated and scaled across thousands of targets simultaneously.
-              </p>
-              <ul class="slide-bullets">
-                <li>
-                  Facial recognition can match a photo against millions of public images to find accounts and locations
-                </li>
-                <li>Natural language models can analyze writing to infer personality, location, or intent</li>
-                <li>AI tools aggregate data across platforms to build profiles from fragments</li>
-                <li>Voice samples from public videos can be cloned with just minutes of audio</li>
-              </ul>
-            </div>
-          </section>
-          <section class="slide" id="osint-ai-social-eng" data-slide>
-            <div class="slide-content">
-              <h2>AI + Social Engineering</h2>
-              <p class="slide-body">
-                Combining OSINT with AI creates some of the most convincing social engineering attacks seen today. The
-                attacker knows everything about you — and now they can sound and look like someone you trust.
-              </p>
-              <ul class="slide-bullets">
-                <li>
-                  Spear phishing: AI generates personalized emails using your name, job, colleagues, and recent activity
-                </li>
-                <li>
-                  Vishing: Voice cloning lets attackers impersonate coworkers, family, or executives on a phone call
-                </li>
-                <li>Deepfakes: AI-generated video calls have been used to authorize fraudulent wire transfers</li>
-                <li>
-                  Synthetic personas: AI builds fake LinkedIn profiles and social histories to gain trust over time
-                </li>
-              </ul>
-            </div>
-          </section>
           <section class="slide slide--has-image" id="osint-tools" data-slide>
             <div class="slide-content">
               <h2>Key OSINT Tools</h2>
@@ -214,46 +160,8 @@
             </div>
           </section>
           <section class="slide" id="osint-dorking" data-slide>
-            <div class="slide-content">
-              <h2>Google Dorking</h2>
-              <p class="slide-body">
-                Google dorking uses advanced search operators to find information that regular searches miss. These
-                results expose real vulnerabilities — an open directory may contain passwords or private files, a login
-                page may be running unpatched software, a log file may contain live session tokens. Dorking is often one
-                of the first steps in a real-world attack. For more, see the Google Hacking Database (GHDB) at
-                exploit-db.com/google-hacking-database
-              </p>
-              <ul class="slide-bullets">
-                <li>intitle:&quot;Index of&quot; — exposes open directory listings</li>
-                <li>intitle:&quot;Login — WordPress&quot; — finds WordPress admin login pages</li>
-                <li>filetype:log inurl:&quot;access.log&quot; — finds exposed server logs</li>
-                <li>site:example.com inurl:admin — finds admin pages on a specific domain</li>
-              </ul>
-            </div>
-          </section>
-          <section class="slide slide--has-image" id="data-everywhere" data-slide>
-            <div class="slide-content">
-              <h2>Data is Everywhere</h2>
-              <p class="slide-body">
-                In the digital age, data is everywhere. Nearly everything we do results in some sort of digital
-                artifact. This may be a log somewhere, an image taken by someone/something, a social media post,
-                receipts, public records, data used in phone suggestions, location history, etc. All of this data can be
-                used by someone to learn more about you and your behaviors. And, unfortunately, all of this data can be
-                used against you! Some of this is NOT public information but private data can become public very quickly
-                through data breaches, system compromises, or just simple mistakes.
-              </p>
-              <ul class="slide-bullets">
-                <li>
-                  Social media checkins, location tracking, image metadata, system logs, images and posts from other
-                  people, interactions with the internet, images/video from street cameras, etc.
-                </li>
-                <li>
-                  People should know what type of data is out there, and how to potentially avoid having this data used
-                  against them.
-                </li>
-                <li>Data removal is difficult! Once your data is out there, it can be very difficult to get back...</li>
-              </ul>
-            </div>
+
+
             <div class="slide-media">
               <img src="/LOTF/images/osint/flock_cameras.png" alt="" class="slide-image" loading="lazy" />
             </div>
@@ -464,46 +372,7 @@
             data-challenge-id="osint5"
             data-answer-hash="2875ad92fce4895eb5efd8d68826a3febe5b6ce8a3a888928afa0a92aea26c20"
           >
-            <div class="challenge-label">Multiple Choice</div>
-            <h3>Which Google dork finds login pages associated with WordPress?</h3>
-            <ul class="options-list">
-              <li>
-                <label class="option-label">
-                  <input type="radio" name="mc-osint5" value="site:com inurl:invoice" /> site:com inurl:invoice
-                </label>
-              </li>
-              <li>
-                <label class="option-label">
-                  <input type="radio" name="mc-osint5" value="intitle:'OpenVpn Status Monitor'" /> intitle:&#39;OpenVpn
-                  Status Monitor&#39;
-                </label>
-              </li>
-              <li>
-                <label class="option-label">
-                  <input type="radio" name="mc-osint5" value="intitle:&#34;Login — WordPress&#34;" />
-                  intitle:&quot;Login — WordPress&quot;
-                </label>
-              </li>
-              <li>
-                <label class="option-label">
-                  <input type="radio" name="mc-osint5" value="intitle:'Index of' intext:'php' site:*.com.*" />
-                  intitle:&#39;Index of&#39; intext:&#39;php&#39; site:*.com.*
-                </label>
-              </li>
-            </ul>
-            <div class="challenge-actions">
-              <button class="btn submit-btn" style="margin-top: 1rem">Submit</button>
-              <div class="challenge-feedback" role="status" aria-live="polite"></div>
-              <div>
-                <button class="hint-toggle">Show hint</button>
-                <div class="hint-text" hidden>
-                  The intitle: operator filters results to pages with a specific string in the title. WordPress login
-                  pages have a distinctive and consistent title. Which option matches that exact pattern?
-                </div>
-              </div>
-              <div class="solved-badge">✓ Solved!</div>
-            </div>
-          </div>
+
           <div
             class="challenge-card challenge-multiple-choice"
             id="card-osint6"
